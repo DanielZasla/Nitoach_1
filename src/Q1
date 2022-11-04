@@ -1,0 +1,12 @@
+Question 1:
+CD: Class Diagram
+TODO: check all "works" answers for black diamond requirements
+1 works according to the CD
+2 Violates Multiplicity, it violates the 0..1 to 1 of Account and Costumer, since an Account may only have up 1 Costumer
+3 works according to the CD
+4 works since Shopping Cart must be connected to an Account and Premium Account is a subclass of Account
+5 Violates Multiplicity. An Order my have multiple Line Items but a Line Item may be part of only one Order
+6 works according to the CD, no aggregation constraints
+7 Violates Aggregation. Shopping Cart must be connected to Account or a subclass
+8 works according to the CD, no aggregation constraints
+9
