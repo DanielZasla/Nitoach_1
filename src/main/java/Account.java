@@ -7,4 +7,5 @@ public class Account {
     Date open;
     Date closed;
     int balance;
+
 }

@@ -9,4 +9,9 @@ TODO: check all "works" answers for black diamond requirements
 6 works according to the CD, no aggregation constraints
 7 Violates Aggregation. Shopping Cart must be connected to Account or a subclass
 8 works according to the CD, no aggregation constraints
-9
+9 works according to the CD
+10 Violates Multiplicity, there does not exist an association between a Web User and the Costumer
+
+
+Hola mi nombre es Nir, patrulla de coños
+I agree with 1-8, I think 9 is fine, and 10 is bad cause there's no connection between Customer and Web User
