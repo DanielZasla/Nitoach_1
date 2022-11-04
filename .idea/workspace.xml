@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="Basic skeleton of work">
-      <change afterPath="$PROJECT_DIR$/src/Q1" afterDir="false" />
+    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="P U SHH">
+      <change afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <list id="7a607965-3a52-4851-ad80-6b543beda0dc" name="Changes by noama" comment="" />
+    <list id="b86494f7-e40a-419c-a817-4e36c3114628" name="Changes by david" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Product.java" afterDir="false" />
+    </list>
+    <list id="7b71157d-c2fe-4cd2-b952-14728a9b92bd" name="Changes by Nir" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Q1" beforeDir="false" afterPath="$PROJECT_DIR$/src/Q1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +47,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "project.structure.last.edited": "Modules",
@@ -52,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667565027292</updated>
-      <workItem from="1667565029887" duration="4231000" />
+      <workItem from="1667565029887" duration="9404000" />
     </task>
     <task id="LOCAL‎00001" summary="Basic skeleton of work">
       <created>1667569125405</created>
@@ -60,7 +71,13 @@
       <option name="presentableId" value="LOCAL‎00001" />
       <updated>1667569125405</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎00002" summary="Added q1">
+      <created>1667569369718</created>
+      <option name="number" value="LOCAL‎00002" />
+      <option name="presentableId" value="LOCAL‎00002" />
+      <updated>1667569369718</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,6 +96,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic skeleton of work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic skeleton of work" />
+    <MESSAGE value="Added q1" />
+    <MESSAGE value="P U SHH" />
+    <option name="LAST_COMMIT_MESSAGE" value="P U SHH" />
   </component>
 </project>
