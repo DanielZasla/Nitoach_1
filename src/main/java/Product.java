@@ -3,4 +3,8 @@ public class Product {
     String id;
     String name;
     PremiumAccount premacc;
+
+    public Product(LineItem lnitem, String id,String name, PremiumAccount) {
+    }
 }
+
