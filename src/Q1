@@ -1,6 +1,5 @@
 Question 1:
 CD: Class Diagram
-TODO: check all "works" answers for black diamond requirements
 1 works according to the CD
 2 Violates Multiplicity, it violates the 0..1 to 1 of Account and Costumer, since an Account may only have up 1 Costumer
 3 works according to the CD
@@ -11,7 +10,3 @@ TODO: check all "works" answers for black diamond requirements
 8 works according to the CD, no aggregation constraints
 9 works according to the CD
 10 Violates Multiplicity, there does not exist an association between a Web User and the Costumer
-
-
-Hola mi nombre es Nir, patrulla de coños
-I agree with 1-8, I think 9 is fine, and 10 is bad cause there's no connection between Customer and Web User

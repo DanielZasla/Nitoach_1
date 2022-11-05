@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="P U SHH">
+    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="Added basic constructors and addressed Product Constructor.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Q1" beforeDir="false" afterPath="$PROJECT_DIR$/src/Q1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
+    <list id="26722f3d-914b-4fa4-aab8-4749d2bfc64a" name="Changes by danik" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" afterDir="false" />
     </list>
     <list id="b86494f7-e40a-419c-a817-4e36c3114628" name="Changes by david" comment="" />
     <list id="7b71157d-c2fe-4cd2-b952-14728a9b92bd" name="Changes by Nir" comment="" />
+    <list id="ee98968f-d265-4b11-af7b-ca955b21d4ff" name="Changes by noama" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +34,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/ShoppingCart.java">
+      <ranges>
+        <range start1="7" end1="8" start2="7" end2="8" changelist="ee98968f-d265-4b11-af7b-ca955b21d4ff" />
+        <range start1="14" end1="14" start2="14" end2="18" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,7 +74,7 @@
       <updated>1667565027292</updated>
       <workItem from="1667565029887" duration="9404000" />
       <workItem from="1667602637285" duration="3619000" />
-      <workItem from="1667637977373" duration="512000" />
+      <workItem from="1667637977373" duration="5235000" />
     </task>
     <task id="LOCAL‎00001" summary="Basic skeleton of work">
       <created>1667569125405</created>
@@ -73,7 +88,14 @@
       <option name="presentableId" value="LOCAL‎00002" />
       <updated>1667569369718</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added basic constructors and addressed Product Constructor.">
+      <created>1667638864068</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667638864068</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +116,7 @@
     <MESSAGE value="Basic skeleton of work" />
     <MESSAGE value="Added q1" />
     <MESSAGE value="P U SHH" />
-    <option name="LAST_COMMIT_MESSAGE" value="P U SHH" />
+    <MESSAGE value="Added basic constructors and addressed Product Constructor." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic constructors and addressed Product Constructor." />
   </component>
 </project>

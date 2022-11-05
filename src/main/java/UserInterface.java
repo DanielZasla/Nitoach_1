@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.Vector;
 
 public class UserInterface {
@@ -7,6 +8,7 @@ public class UserInterface {
     static Vector<Supplier> SupplierList = new Vector<>();
     static Vector<User> UserList = new Vector<>();
 
+    Scanner scanner = new Scanner(System.in);
     private boolean connected = false;
     private String connected_id;
 
@@ -16,6 +18,24 @@ public class UserInterface {
     }
 
     private void AddUser(String login_id){
+        if (getUser(login_id)!= null){
+            System.out.printf("Uh oh, theres already someone called %s%n",login_id);
+            return;
+        }
+        System.out.println("Enter password for id " + login_id + ": ");
+        String password = scanner.nextLine();
+        System.out.println("Enter address: ");
+        Address address = new Address(scanner.nextLine());
+        System.out.println("Enter phone: ");
+        String phone = scanner.nextLine();
+        System.out.println("Enter email: ");
+        String email = scanner.nextLine();
+        System.out.println("Enter initial balance: ");
+
+        Customer c = new Customer(login_id, address, phone, email);
+        User u = new User(login_id, password);
+        UserList.add(u);
+        CustomerList.add(c);
 
     }
 
