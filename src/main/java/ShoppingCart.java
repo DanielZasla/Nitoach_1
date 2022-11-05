@@ -6,4 +6,10 @@ public class ShoppingCart {
     User user;
     Account acc;
     Vector<LineItem> itmlist;
+
+    public ShoppingCart(User user, Account acc) {
+        this.user = user;
+        this.acc = acc;
+        created = new Date();
+    }
 }

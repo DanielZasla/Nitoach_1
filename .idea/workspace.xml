@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="P U SHH">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" afterDir="false" />
     </list>
     <list id="b86494f7-e40a-419c-a817-4e36c3114628" name="Changes by david" comment="" />
     <list id="7b71157d-c2fe-4cd2-b952-14728a9b92bd" name="Changes by Nir" comment="" />
@@ -58,6 +59,7 @@
       <updated>1667565027292</updated>
       <workItem from="1667565029887" duration="9404000" />
       <workItem from="1667602637285" duration="3619000" />
+      <workItem from="1667637977373" duration="512000" />
     </task>
     <task id="LOCAL‎00001" summary="Basic skeleton of work">
       <created>1667569125405</created>

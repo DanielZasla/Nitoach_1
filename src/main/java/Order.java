@@ -6,5 +6,12 @@ public class Order {
     Date shipped;
     Address ship_to;
     OrderStatus status;
-    float total=0;
+    float total;
+
+    public Order(String number, Address ship_to, float total) {
+        this.number = number;
+        this.ship_to = ship_to;
+        this.status = OrderStatus.New;
+        this.total = total;
+    }
 }

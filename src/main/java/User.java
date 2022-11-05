@@ -3,8 +3,10 @@ public class User {
     String password;
     UserState state;
 
-    public User(String login_id) {
+    public User(String login_id, String password) {
         this.login_id = login_id;
+        this.password = password;
+        state = UserState.New;
     }
 
     public String getLogin_id() {
