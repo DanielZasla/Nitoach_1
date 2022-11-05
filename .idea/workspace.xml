@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="Added basic constructors and addressed Product Constructor.">
+    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="Changes by Nir &amp; Noam &amp; Daniel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Q1" beforeDir="false" afterPath="$PROJECT_DIR$/src/Q1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="26722f3d-914b-4fa4-aab8-4749d2bfc64a" name="Changes by danik" comment="">
@@ -74,7 +71,7 @@
       <updated>1667565027292</updated>
       <workItem from="1667565029887" duration="9404000" />
       <workItem from="1667602637285" duration="3619000" />
-      <workItem from="1667637977373" duration="5235000" />
+      <workItem from="1667637977373" duration="7240000" />
     </task>
     <task id="LOCAL‎00001" summary="Basic skeleton of work">
       <created>1667569125405</created>
@@ -95,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667638864068</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changes by Nir &amp; Noam &amp; Daniel">
+      <created>1667647816259</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667647816259</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +121,7 @@
     <MESSAGE value="Added q1" />
     <MESSAGE value="P U SHH" />
     <MESSAGE value="Added basic constructors and addressed Product Constructor." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added basic constructors and addressed Product Constructor." />
+    <MESSAGE value="Changes by Nir &amp; Noam &amp; Daniel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by Nir &amp; Noam &amp; Daniel" />
   </component>
 </project>

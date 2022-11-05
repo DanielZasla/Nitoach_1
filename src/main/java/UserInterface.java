@@ -64,6 +64,16 @@ public class UserInterface {
     }
 
     private void AddProduct(String order_id, String login_id, String product_name){
+        Account a = getAccount(login_id);
+        Order o = getOrder(order_id);
+        Product p = getProduct(product_name);
+
+        if (a == null || o == null || p == null)
+            { System.out.println("One or more of the details doesn't exist."); return; }
+        if (a.is_closed)
+            { System.out.println("Account " + login_id + " is closed."); return; }
+        //TODO: Should add consideration to order status? Will continue after answer in forum.
+
 
     }
 
