@@ -42,7 +42,21 @@ public class UserInterface {
     }
 
     private void RemoveUser(String login_id){
-
+        if (connected_user != null){
+            System.out.println("You must first log off the currently connected user in order to remove a user.");
+        } else {
+            User user = getUser(login_id);
+            if (user == null){
+                System.out.println("No such user exists");
+                return;
+            }
+            String id = user.getLogin_id();
+            ShoppingCartList.remove(user.getCart());
+            AccountList.remove(getAccount(id));
+            CustomerList.remove(user.getCustomer());
+            UserList.remove(user);
+            System.out.println("User has been removed.");
+        }
     }
 
     private void LoginUser(String login_id, String password){
@@ -61,7 +75,7 @@ public class UserInterface {
     }
 
     private void CreateOrder(String address){
-
+        // TODO: Create Order
     }
 
     private void AddProductToOrder(String order_id, String login_id, String product_name){
@@ -92,12 +106,40 @@ public class UserInterface {
 
     }
 
-    private void DisplayOrder(){
+    private void DisplayOrder(){ // TODO figure out if we are creating n LineItems to 1 Order to n Payments or not, Future
+        if (connected_user == null){
+            System.out.println("No user is connected! Please log in to display order.");
+        }
+        else {
+            System.out.println("Here is the last order you placed:");
+            Account acc = getAccount(connected_user.getLogin_id());
+            if (acc != null){
+                Order order = acc.Orders.get(0);
+                order.showOrder();
+            }
+            else{
+                System.out.println("DUBUG PRINT, USER WITH NO ACCOUNT, STINKY PROBLEM");
+            }
+        }
 
     }
 
     private void LinkProduct(String product_name, int price, int quantity){
-
+        Account acc = getAccount(connected_user.getLogin_id());
+        if (!(acc instanceof PremiumAccount)){
+            System.out.println("You are not a premium account and cannot link products.");
+            return;
+        }
+        Product prod = getProduct(product_name);
+        if (prod == null){
+            System.out.println("No product exits with that name.");
+            return;
+        }
+        if (!prod.Link((PremiumAccount) acc)){
+            System.out.println("This product is already linked to another Premium user.");
+        }
+        ((PremiumAccount) acc).prods.add(prod);
+        //TODO: LOOK FOR CLARIFICATION ON FORUM OR MAIL OR NEW VERSION OF ASSIGNMENT DOC
     }
 
     private void AddProduct(String product_name, String supplier_name){

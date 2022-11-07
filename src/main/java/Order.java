@@ -18,4 +18,10 @@ public class Order {
         this.status = OrderStatus.New;
         this.total = total;
     }
+
+    public void showOrder() {
+        System.out.println("ID number: " + this.number + "\nOrder date: " + this.ordered + "\nShipping date: " + this.shipped + "\nOrder address: " + this.ship_to + "\nOrder status: " + this.status + "\nTotal payed: " + this.total + "$");
+
+    }
 }
+

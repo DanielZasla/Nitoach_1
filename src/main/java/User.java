@@ -4,6 +4,28 @@ public class User {
     String login_id;
     String password;
     UserState state;
+    Customer customer;
+    ShoppingCart cart;
+
+    public void setLogin_id(String login_id) {
+        this.login_id = login_id;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public void setCart(ShoppingCart cart) {
+        this.cart = cart;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public ShoppingCart getCart() {
+        return cart;
+    }
 
     public User(String login_id, String password) {
         this._id = String.format("user%d",UserCounter);
@@ -11,6 +33,8 @@ public class User {
         this.login_id = login_id;
         this.password = password;
         state = UserState.New;
+        customer = null;
+        cart = null;
     }
 
     public String getLogin_id() {
