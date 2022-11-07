@@ -1,16 +1,19 @@
 public class Product {
     //LineItem lnitem = null;
-    String id;
+    static int ProdCounter = 1;
+    String _id;
     String name;
     Supplier supplier;
 
     PremiumAccount premacc;
 
 
-    public Product(String id, String name, Supplier supplier){
-        this.id = id;
+    public Product(String name, Supplier supplier){
+        this._id = String.format("product%d",ProdCounter);
+        ProdCounter++;
         this.name = name;
         this.supplier = supplier;
+        this.premacc = null;
     }
 
 }

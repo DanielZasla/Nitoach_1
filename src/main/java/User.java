@@ -1,9 +1,13 @@
 public class User {
+    static int UserCounter = 1;
+    String _id;
     String login_id;
     String password;
     UserState state;
 
     public User(String login_id, String password) {
+        this._id = String.format("user%d",UserCounter);
+        UserCounter++;
         this.login_id = login_id;
         this.password = password;
         state = UserState.New;

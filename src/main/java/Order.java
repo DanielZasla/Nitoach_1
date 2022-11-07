@@ -1,6 +1,8 @@
 import java.util.Date;
 
 public class Order {
+    static int OrdCounter = 1;
+    String _id;
     String number;
     Date ordered;
     Date shipped;
@@ -9,6 +11,8 @@ public class Order {
     float total;
 
     public Order(String number, Address ship_to, float total) {
+        this._id = String.format("order%d", OrdCounter);
+        OrdCounter++;
         this.number = number;
         this.ship_to = ship_to;
         this.status = OrderStatus.New;

@@ -1,6 +1,8 @@
 import java.util.Date;
 
 public abstract class Payment {
+    static int PayCounter;
+    String _id;
     String id;
     Date paid;
     float total;

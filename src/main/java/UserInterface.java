@@ -1,16 +1,20 @@
+import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
-import java.util.Vector;
 
 public class UserInterface {
-    static Vector<Account> AccountList = new Vector<>();
-    static Vector<Customer> CustomerList = new Vector<>();
-    static Vector<Product> ProductList = new Vector<>();
-    static Vector<Supplier> SupplierList = new Vector<>();
-    static Vector<User> UserList = new Vector<>();
+    static ArrayList<Account> AccountList = new ArrayList<>();
+    static ArrayList<Customer> CustomerList = new ArrayList<>();
+    static ArrayList<LineItem> LineItemList = new ArrayList<>();
+    static ArrayList<Order> OrderList = new ArrayList<>();
+    static ArrayList<Payment> PaymentList = new ArrayList<>();
+    static ArrayList<Product> ProductList = new ArrayList<>();
+    static ArrayList<ShoppingCart> ShoppingCartList = new ArrayList<>();
+    static ArrayList<Supplier> SupplierList = new ArrayList<>();
+    static ArrayList<User> UserList = new ArrayList<>();
 
     Scanner scanner = new Scanner(System.in);
-    private boolean connected = false;
-    private String connected_id;
+    private User connected_user;
 
 
     public static void main(String[] args) {
@@ -22,21 +26,19 @@ public class UserInterface {
             System.out.printf("Uh oh, theres already someone called %s%n",login_id);
             return;
         }
-        System.out.println("Enter password for id " + login_id + ": ");
-        String password = scanner.nextLine();
-        System.out.println("Enter address: ");
-        Address address = new Address(scanner.nextLine());
-        System.out.println("Enter phone: ");
-        String phone = scanner.nextLine();
-        System.out.println("Enter email: ");
-        String email = scanner.nextLine();
-        System.out.println("Enter initial balance: ");
 
-        Customer c = new Customer(login_id, address, phone, email);
-        User u = new User(login_id, password);
+        User u = createUser(login_id);
+        Customer c = createCustomer(login_id);
+        u.setCustomer(c);
+        Account a = createAccount(c, login_id);
+        ShoppingCart sc = createShoppingCart(u, a);
+
         UserList.add(u);
         CustomerList.add(c);
+        AccountList.add(a);
+        ShoppingCartList.add(sc);
 
+        System.out.println("New User successfully created, returning to main menu.");
     }
 
     private void RemoveUser(String login_id){
@@ -44,15 +46,14 @@ public class UserInterface {
     }
 
     private void LoginUser(String login_id, String password){
-        if (connected){
+        if (connected_user!=null){
             System.out.println("A different user is connected right now.");
             return;
         }
         User user;
         if ((user = getUser(login_id)) != null){
             if (user.password.equals(password)) {
-                connected = true;
-                connected_id = login_id;
+                connected_user = user;
                 return;
             }
         }
@@ -63,13 +64,27 @@ public class UserInterface {
 
     }
 
-    private void AddProduct(String order_id, String login_id, String product_name){
+    private void AddProductToOrder(String order_id, String login_id, String product_name){
         Account a = getAccount(login_id);
-        Order o = getOrder(order_id);
+        //Order o = getOrder(order_id);
+        Order o = null;
+        if(a==null){
+            System.out.println("The account you are looking does not exits."); return;
+        }
+        for(Order ord: a.Orders){
+            if(ord.number.equals(order_id)){
+                o = ord;
+            }
+        }
+        if(o==null){
+            System.out.println("The account " + a.id + " does not have an order with that number."); return;
+        }
         Product p = getProduct(product_name);
-
-        if (a == null || o == null || p == null)
-            { System.out.println("One or more of the details doesn't exist."); return; }
+        if(p==null){
+            System.out.println("The order " + o.number + " does not have an product with that number."); return;
+        }
+        /*if (a == null || o == null || p == null)
+            { System.out.println("One or more of the details doesn't exist."); return; }*/
         if (a.is_closed)
             { System.out.println("Account " + login_id + " is closed."); return; }
         //TODO: Should add consideration to order status? Will continue after answer in forum.
@@ -97,7 +112,7 @@ public class UserInterface {
 
     }
 
-    // Private Methods for Vector Functionality
+    // Private Methods for ArrayList Functionality
 
     /**
      * @param id ID of the Account
@@ -124,14 +139,38 @@ public class UserInterface {
         }
         return null;
     }
+    /**
+     * @param id _ID of the LineItem
+     * @return The LineItem with the matching ID if exists, else null
+     */
+    private static LineItem getLineItem(String id){
+        for (LineItem l : LineItemList){
+            if (l._id.equals(id)){
+                return l;
+            }
+        }
+        return null;
+    }
 
     /**
-     * @param id ID of the Product
-     * @return The Product with the matching ID if exists, else null
+     * @param id ID of the Order
+     * @return The Order with the matching ID if exists, else null
      */
-    private static Product getProduct(String id){
+    private static Order getOrder(String id){
+        for (Order o: OrderList){
+            if (o.number.equals(id)){
+                return o;
+            }
+        }
+        return null;
+    }
+    /**
+     * @param name Name of the Product
+     * @return The Product with the matching name if exists, else null
+     */
+    private static Product getProduct(String name){
         for (Product p : ProductList){
-            if (p.id.equals(id)){
+            if (p.name.equals(name)){
                 return p;
             }
         }
@@ -170,8 +209,8 @@ public class UserInterface {
     private static void PopulateSystem(){
         SupplierList.add(new Supplier("Osem", "Osem"));
         SupplierList.add(new Supplier("EastWest", "EastWest"));
-        ProductList.add(new Product("Bamba", "Bamba", getSupplier("Osem")));
-        ProductList.add(new Product("Ramen", "Ramen", getSupplier("EastWest")));
+        ProductList.add(new Product("Bamba", getSupplier("Osem")));
+        ProductList.add(new Product("Ramen", getSupplier("EastWest")));
         //AccountList.add(new Account("Dani", "Dani123", getAccount("EastWest"))); TODO figure out if this needs a Customer to reference
         // TODO figure out previous thing and by that logic understand how to deal with PremiumAccount
     }

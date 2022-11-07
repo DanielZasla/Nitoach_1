@@ -1,4 +1,6 @@
 public class Customer {
+    static int CusCounter = 1;
+    String _id;
     String id;
     Address address;
     String phone;
@@ -8,6 +10,8 @@ public class Customer {
     Account account;
 
     public Customer(String id, Address address, String phone, String email) {
+        this._id = String.format("customer%d",CusCounter);
+        CusCounter++;
         this.id = id;
         this.address = address;
         this.phone = phone;
