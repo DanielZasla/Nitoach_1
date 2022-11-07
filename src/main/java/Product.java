@@ -16,5 +16,15 @@ public class Product {
         this.premacc = null;
     }
 
+    public boolean Link(PremiumAccount prem){
+        if (premacc != null){
+            return false;
+        }
+        this.premacc = prem;
+        return true;
+    }
+
+
+
 }
 

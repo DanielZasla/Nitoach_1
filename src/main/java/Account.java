@@ -22,4 +22,10 @@ public class Account {
         open = new Date();
         is_closed = false;
     }
+    public void printConnected(){
+        System.out.println("this Account is connected to these orders:");
+        for (Order order:Orders) {
+            System.out.println(order._id);
+        }
+    }
 }

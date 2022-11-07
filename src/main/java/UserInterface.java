@@ -143,15 +143,138 @@ public class UserInterface {
     }
 
     private void AddProduct(String product_name, String supplier_name){
-
+        Supplier s = getSupplier(supplier_name);
+        if(s != null){
+            Product p = new Product(product_name,s);
+            ProductList.add(p);
+        }
     }
 
     private void ShowAllObjects() {
-
+        System.out.println("Accounts:");
+        for (Account account : AccountList) {
+            System.out.println(account._id);
+        }
+        System.out.println("Customers:");
+        for (Customer customer : CustomerList) {
+            System.out.println(customer._id);
+        }
+        System.out.println("Line Items:");
+        for (LineItem lineItem : LineItemList) {
+            System.out.println(lineItem._id);
+        }
+        System.out.println("Orders:");
+        for (Order order : OrderList) {
+            System.out.println(order._id);
+        }
+        System.out.println("Payments:");
+        for (Payment payment : PaymentList) {
+            System.out.println(payment._id);
+        }
+        System.out.println("Products:");
+        for (Product product : ProductList) {
+            System.out.println(product._id);
+        }
+        System.out.println("Shopping Carts:");
+        for (ShoppingCart shoppingCart : ShoppingCartList) {
+            System.out.println(shoppingCart._id);
+        }
+        System.out.println("Suppliers:");
+        for (Supplier supplier : SupplierList) {
+            System.out.println(supplier._id);
+        }
+        System.out.println("Users:");
+        for (User user : UserList) {
+            System.out.println(user.login_id);
+        }
     }
 
     private void ShowObjectId(String id){
-
+        System.out.println("Please choose the object you want to see:");
+        System.out.println("""
+                1) Account
+                2) Customer
+                3) Line Item
+                4) Order
+                5) Payment
+                6) Product
+                7) Shopping Cart
+                8) Supplier
+                9) User""");
+        int pick = scanner.nextInt();
+        boolean flag = false;
+        switch (pick){//TODO FINISH THE PRINT CONNECTED FUNCTION FOR ALL THE CLASSES
+            case 1:
+                for (Account account : AccountList) {
+                    if(Objects.equals("account" + id, account._id)) {
+                        flag = true;
+                        System.out.println("Id: "+ account.id+"\nbilling address: " + account.billing_address + "\nIs closed: " + account.is_closed
+                        + "\nOpen: "+account.open+"\nClosed: "+ account.closed +"\nBalance: "+account.balance);
+                    }
+                }
+            case 2:
+                for (Customer customer : CustomerList) {
+                    if (Objects.equals("customer" + id, customer._id)) {
+                        flag = true;
+                        System.out.println("Id: "+ customer.id+"\nAdress: "+ customer.address+"\nPhone: "+ customer.phone
+                        +"\nEmail: "+customer.email);
+                    }
+                }
+            case 3:
+                for (LineItem lineItem : LineItemList) {
+                    if (Objects.equals("lineItem" + id, lineItem._id)) {
+                        flag = true;
+                        System.out.println("Quantity: "+ lineItem.quantity+"\nPrice: "+ lineItem.price);
+                    }
+                }
+            case 4:
+                for (Order order : OrderList) {
+                    if (Objects.equals("order" + id, order._id)) {
+                        flag = true;
+                        System.out.println("Number: "+ order.number+"\nOrdered: " + order.ordered + "\nShipped: " + order.shipped
+                                + "\nShip to: "+order.ship_to+"\nStatus: "+ order.status +"\nTotal: "+order.total);
+                    }
+                }
+            case 5://TODO CHECK IF DELAYED OR IMMEDIATE TO PRINT THEIR ADDITIONAL VARIABLES
+                for (Payment payment : PaymentList) {
+                    if (Objects.equals("payment" + id, payment._id)) {
+                        flag = true;
+                        System.out.println("Id: "+ payment.id+"\nPaid: " + payment.paid + "\nTotal: " + payment.total
+                                + "\nDetails: "+payment.details);
+                    }
+                }
+            case 6:
+                for (Product product : ProductList) {
+                    if (Objects.equals("product" + id, product._id)) {
+                        flag = true;
+                        System.out.println(product._id+"\nName: " + product.name);
+                    }
+                }
+            case 7:
+                for (ShoppingCart shoppingCart : ShoppingCartList) {
+                    if (Objects.equals("shoppingCart" + id, shoppingCart._id)) {
+                        flag = true;
+                        System.out.println("Created: " + shoppingCart.created);
+                    }
+                }
+            case 8:
+                for (Product product : ProductList) {
+                    if (Objects.equals("product" + id, product._id)) {
+                        flag = true;
+                        System.out.println(product._id+"\nName: " + product.name);
+                    }
+                }
+            case 9:
+                for (User user : UserList) {
+                    if (Objects.equals("user" + id, user._id)) {
+                        flag = true;
+                        System.out.println("Login id: "+ user.login_id+"\nPassword: " + user.password +
+                                "\nState: " + user.state);
+                    }
+                }
+        }
+        if(!flag)
+            System.out.println("Id not found pls try again later");
     }
 
     // Private Methods for ArrayList Functionality
