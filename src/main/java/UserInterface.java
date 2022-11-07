@@ -23,7 +23,7 @@ public class UserInterface {
 
     private void AddUser(String login_id){
         if (getUser(login_id)!= null){
-            System.out.printf("Uh oh, theres already someone called %s%n",login_id);
+            System.out.printf("Uh oh, ID %s is already in the system.%n",login_id);
             return;
         }
 
@@ -40,6 +40,7 @@ public class UserInterface {
 
         System.out.println("New User successfully created, returning to main menu.");
     }
+
 
     private void RemoveUser(String login_id){
         if (connected_user != null){
@@ -378,6 +379,72 @@ public class UserInterface {
         ProductList.add(new Product("Ramen", getSupplier("EastWest")));
         //AccountList.add(new Account("Dani", "Dani123", getAccount("EastWest"))); TODO figure out if this needs a Customer to reference
         // TODO figure out previous thing and by that logic understand how to deal with PremiumAccount
+    }
+
+    /**
+     * Creates a User with the user's given information.
+     * @param login_id Given ID.
+     * @return User
+     */
+    private User createUser(String login_id){
+        System.out.println("Creating user (ID: " + login_id + "):");
+        System.out.println("Enter password for the user: ");
+        String password = scanner.nextLine();
+
+        return new User(login_id, password);
+    }
+
+    /**
+     * Creates a Customer with the user's given information.
+     * @param login_id Given ID.
+     * @return Customer
+     */
+    private Customer createCustomer(String login_id){
+        System.out.println("Creating customer (ID: " + login_id + "):");
+        System.out.println("Enter address: ");
+        Address address = new Address(scanner.nextLine());
+        System.out.println("Enter phone: ");
+        String phone = scanner.nextLine();
+        System.out.println("Enter email: ");
+        String email = scanner.nextLine();
+
+        return new Customer(login_id, address, phone, email);
+    }
+
+    /**
+     * Creates a Account with the user's given information.
+     * @param c Customer to connect to.
+     * @param login_id Given ID.
+     * @return Account
+     */
+    private Account createAccount(Customer c, String login_id){
+        System.out.println("Creating account (ID: " + login_id + "):");
+        System.out.println("Enter billing address: ");
+        String billingaddress = scanner.nextLine();
+        System.out.println("Enter initial balance: ");
+        int balance = scanner.nextInt();
+        String premium;
+        while(true){
+            System.out.println("Would you like to sign up to our Premium Account program? (y/n)");
+            premium = scanner.nextLine();
+            if (premium.equalsIgnoreCase("y"))
+                return new PremiumAccount(c, login_id, billingaddress, balance);
+            else if (premium.equalsIgnoreCase("n")) {
+                return new Account(c, login_id, billingaddress, balance);
+            }
+            else
+                System.out.println("Invalid input.");
+        }
+    }
+
+    /**
+     * Creates a ShoppingCart with the user's given information.
+     * @param u User to connect to.
+     * @param a Account to connect to.
+     * @return ShoppingCart
+     */
+    private ShoppingCart createShoppingCart(User u, Account a){
+        return new ShoppingCart(u, a);
     }
 
 }
