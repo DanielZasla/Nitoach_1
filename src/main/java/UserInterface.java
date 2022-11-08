@@ -17,8 +17,85 @@ public class UserInterface {
     private User connected_user;
 
 
-    public static void main(String[] args) {
+    public void run() {
         PopulateSystem();
+        Scanner scanner = new Scanner(System.in);
+        while(true) {
+            System.out.println("""
+                    1) Add User
+                    2) Remove User
+                    3) Login User
+                    4) Logout User
+                    5) Creat New Order
+                    6) Add Product To Order
+                    7) Display Order
+                    8) Link Product
+                    9) Add Product
+                    10) Delete Product
+                    11) Show All Object
+                    12) Show Object By Id
+                    0) Exit
+                    """);
+            int pick = scanner.nextInt();
+            switch (pick){
+                case 1:
+                    System.out.println("Please enter login id for the new user: ");
+                    String loginId = scanner.next();
+                    AddUser(loginId);
+                case 2:
+                    System.out.println("Please enter login id for the user you want to remove: ");
+                    loginId = scanner.next();
+                    RemoveUser(loginId);
+                case 3:
+                    System.out.println("Please enter login id for the user: ");
+                    loginId = scanner.next();
+                    System.out.println("Please enter the password for this user");
+                    String password = scanner.next();
+                    LoginUser(loginId,password);
+                case 4://TODO continue after implemented
+
+
+                case 5://TODO continue after implemented
+
+
+                case 6:
+                    System.out.println("Please enter the order id: ");
+                    String orderId = scanner.next();
+                    System.out.println("Please enter login id for the user: ");
+                    loginId = scanner.next();
+                    System.out.println("Please enter the Product name:");
+                    String productName = scanner.next();
+                    AddProductToOrder(orderId,loginId,productName);
+                case 7:
+                    DisplayOrder();
+                case 8:
+                    System.out.println("Please enter the Product name:");
+                    productName = scanner.next();
+                    System.out.println("Please enter the price: ");
+                    int price = scanner.nextInt();
+                    System.out.println("Please enter the quantity: ");
+                    int quantity = scanner.nextInt();
+                    LinkProduct(productName,price,quantity);
+                case 9:
+                    System.out.println("Please enter the Product name:");
+                    productName = scanner.next();
+                    System.out.println("Please enter the supplier name:");
+                    String supplierName = scanner.next();
+                    AddProduct(productName,supplierName);
+                case 10:
+                    System.out.println("Please enter the Product name:");
+                    productName = scanner.next();
+                    //TODO continue when implemented
+                case 11:
+                    ShowAllObjects();
+                case 12:
+                    System.out.println("Please enter Id:");
+                    String id = scanner.next();
+                    ShowObjectId(id);
+                case 0:
+                    break;
+            }
+        }
     }
 
     private void AddUser(String login_id){
