@@ -33,6 +33,10 @@ public class Product {
     public void setPremacc(PremiumAccount premacc) {
         this.premacc = premacc;
     }
+
+    public void printDetails() {
+        System.out.println(_id+"\nName: " + name);
+    }
     public void printConnected(){
         System.out.println("this product is connected to these Line Items:");
         for (LineItem item:LItems) {

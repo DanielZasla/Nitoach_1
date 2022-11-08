@@ -234,7 +234,7 @@ public class UserInterface {
                 9) User""");
         int pick = scanner.nextInt();
         boolean flag = false;
-        switch (pick){//TODO FINISH THE PRINT CONNECTED FUNCTION FOR ALL THE CLASSES
+        switch (pick){
             case 1:
                 for (Account account : AccountList) {
                     if(Objects.equals("account" + id, account._id)) {
@@ -255,52 +255,56 @@ public class UserInterface {
                 for (LineItem lineItem : LineItemList) {
                     if (Objects.equals("lineItem" + id, lineItem._id)) {
                         flag = true;
-                        System.out.println("Quantity: "+ lineItem.quantity+"\nPrice: "+ lineItem.price);
+                        lineItem.printDetails();
+                        lineItem.printConnected();
                     }
                 }
             case 4:
                 for (Order order : OrderList) {
                     if (Objects.equals("order" + id, order._id)) {
                         flag = true;
-                        System.out.println("Number: "+ order.number+"\nOrdered: " + order.ordered + "\nShipped: " + order.shipped
-                                + "\nShip to: "+order.ship_to+"\nStatus: "+ order.status +"\nTotal: "+order.total);
+                        order.printDetails();
+                        order.printConnected();
                     }
                 }
             case 5://TODO CHECK IF DELAYED OR IMMEDIATE TO PRINT THEIR ADDITIONAL VARIABLES
                 for (Payment payment : PaymentList) {
                     if (Objects.equals("payment" + id, payment._id)) {
                         flag = true;
-                        System.out.println("Id: "+ payment.id+"\nPaid: " + payment.paid + "\nTotal: " + payment.total
-                                + "\nDetails: "+payment.details);
+                        payment.printDetails();
+                        payment.printConnected();
                     }
                 }
             case 6:
                 for (Product product : ProductList) {
                     if (Objects.equals("product" + id, product._id)) {
                         flag = true;
-                        System.out.println(product._id+"\nName: " + product.name);
+                        product.printDetails();
+                        product.printConnected();
                     }
                 }
             case 7:
                 for (ShoppingCart shoppingCart : ShoppingCartList) {
                     if (Objects.equals("shoppingCart" + id, shoppingCart._id)) {
                         flag = true;
-                        System.out.println("Created: " + shoppingCart.created);
+                        shoppingCart.printDetails();
+                        shoppingCart.printConnected();
                     }
                 }
             case 8:
                 for (Product product : ProductList) {
                     if (Objects.equals("product" + id, product._id)) {
                         flag = true;
-                        System.out.println(product._id+"\nName: " + product.name);
+                        product.printDetails();
+                        product.printConnected();
                     }
                 }
             case 9:
                 for (User user : UserList) {
                     if (Objects.equals("user" + id, user._id)) {
                         flag = true;
-                        System.out.println("Login id: "+ user.login_id+"\nPassword: " + user.password +
-                                "\nState: " + user.state);
+                        user.printDetails();
+                        user.printConnected();
                     }
                 }
             default:

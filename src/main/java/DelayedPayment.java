@@ -7,4 +7,9 @@ public class DelayedPayment extends Payment{
         PayCounter++;
     }
 
+    @Override
+    public void printDetails() {
+        super.printDetails();
+        System.out.println("Payment Date is: "+paymentDate);
+    }
 }

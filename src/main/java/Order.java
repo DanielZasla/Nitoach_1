@@ -27,6 +27,8 @@ public class Order {
         System.out.println("ID number: " + this.number + "\nOrder date: " + this.ordered + "\nShipping date: " + this.shipped + "\nOrder address: " + this.ship_to + "\nOrder status: " + this.status + "\nTotal payed: " + this.total + "$");
 
     }
+
+
     public void printConnected(){
         System.out.println("this Order is connected to these Line Items:");
         for (LineItem item:LItems) {

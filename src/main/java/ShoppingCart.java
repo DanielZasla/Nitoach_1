@@ -21,6 +21,10 @@ public class ShoppingCart {
     public ArrayList<LineItem> getLItems() {
         return LItems;
     }
+
+    public void printDetails() {
+        System.out.println("Created: " + created);
+    }
     public void printConnected(){
         System.out.println("this Shopping Cart is connected to these Line Items:");
         for (LineItem item:LItems) {
