@@ -27,5 +27,15 @@ public class Order {
         System.out.println("ID number: " + this.number + "\nOrder date: " + this.ordered + "\nShipping date: " + this.shipped + "\nOrder address: " + this.ship_to + "\nOrder status: " + this.status + "\nTotal payed: " + this.total + "$");
 
     }
+    public void printConnected(){
+        System.out.println("this Order is connected to these Line Items:");
+        for (LineItem item:LItems) {
+            System.out.println(item._id);
+        }
+        System.out.println("this Order is also connected to these Payments:");
+        for (Payment payment:Payments) {
+            System.out.println(payment._id);
+        }
+    }
 }
 

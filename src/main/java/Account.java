@@ -26,6 +26,12 @@ public class Account {
         open = new Date();
         is_closed = false;
     }
+    public void printDetails() {
+        System.out.println("Id: "+ id+"\nbilling address: " + billing_address + "\nIs closed: " + is_closed
+                + "\nOpen: "+open+"\nClosed: "+ closed +"\nBalance: "+balance);
+    }
+
+
     public void printConnected(){
         System.out.println("this Account is connected to these orders:");
         for (Order order:Orders) {

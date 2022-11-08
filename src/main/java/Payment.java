@@ -34,4 +34,8 @@ public abstract class Payment {
     public void setDetails(String newdetails){
         details = newdetails;
     }
+    public void printConnected(){
+        System.out.println("this Payment is connected to: "+ order._id);
+        System.out.println("this Payment is also connected to: "+ acc._id);
+    }
 }

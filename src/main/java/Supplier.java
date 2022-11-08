@@ -13,4 +13,10 @@ public class Supplier {
         this.id = id;
         this.name = name;
     }
+    public void printConnected(){
+        System.out.println("this Supplier is connected to these Products:");
+        for (Product product:Products) {
+            System.out.println(product._id);
+        }
+    }
 }

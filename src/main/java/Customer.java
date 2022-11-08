@@ -26,6 +26,10 @@ public class Customer {
         this.user = user;
     }
 
+    public void printDetails() {
+        System.out.println("Id: "+ id+"\nAdress: "+ address+"\nPhone: "+ phone
+                +"\nEmail: "+email);
+    }
     public void printConnected(){
         System.out.println("this Customer is connected to: "+ account._id);
         System.out.println("this Customer is also connected to: "+ user._id);

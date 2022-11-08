@@ -57,4 +57,8 @@ public class User {
     public void setState(UserState state) {
         this.state = state;
     }
+    public void printConnected(){
+        System.out.println("this User is connected to: "+ customer._id);
+        System.out.println("this User is also connected to: "+ cart._id);
+    }
 }

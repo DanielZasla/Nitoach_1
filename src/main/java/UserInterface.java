@@ -239,16 +239,16 @@ public class UserInterface {
                 for (Account account : AccountList) {
                     if(Objects.equals("account" + id, account._id)) {
                         flag = true;
-                        System.out.println("Id: "+ account.id+"\nbilling address: " + account.billing_address + "\nIs closed: " + account.is_closed
-                        + "\nOpen: "+account.open+"\nClosed: "+ account.closed +"\nBalance: "+account.balance);
+                        account.printDetails();
+                        account.printConnected();
                     }
                 }
             case 2:
                 for (Customer customer : CustomerList) {
                     if (Objects.equals("customer" + id, customer._id)) {
                         flag = true;
-                        System.out.println("Id: "+ customer.id+"\nAdress: "+ customer.address+"\nPhone: "+ customer.phone
-                        +"\nEmail: "+customer.email);
+                       customer.printDetails();
+                       customer.printConnected();
                     }
                 }
             case 3:
