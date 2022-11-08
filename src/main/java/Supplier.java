@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public class Supplier {
+    ArrayList<Product> Products = new ArrayList<>();
     static int SupCount = 1;
     String _id;
     String id;

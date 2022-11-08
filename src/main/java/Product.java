@@ -1,5 +1,7 @@
+import java.util.ArrayList;
+
 public class Product {
-    //LineItem lnitem = null;
+    ArrayList<LineItem> LItems = new ArrayList<>();
     static int ProdCounter = 1;
     String _id;
     String name;
@@ -24,7 +26,20 @@ public class Product {
         return true;
     }
 
+    public void addLineItem(LineItem l){
+        LItems.add(l);
+    }
 
+    public void setPremacc(PremiumAccount premacc) {
+        this.premacc = premacc;
+    }
+    public void printConnected(){
+        System.out.println("this product is connected to these Line Items:");
+        for (LineItem item:LItems) {
+            System.out.println(item._id);
+        }
+        System.out.println("this product is also connected to this Premium Account: "+premacc);
+    }
 
 }
 

@@ -4,38 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="Late night bullshittery, @Daniel check Product constructor">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="Big day of work, lots of progress, more tomorrow. Keep updating Trello">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DelayedPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DelayedPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImmediatePayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImmediatePayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
+    <list id="26722f3d-914b-4fa4-aab8-4749d2bfc64a" name="Changes by danik" comment="Changes by danik">
+      <change beforePath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
+    <list id="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" name="Changes by david" comment="Changes by david">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/LineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LineItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Supplier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
-    <list id="26722f3d-914b-4fa4-aab8-4749d2bfc64a" name="Changes by danik" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
-    <list id="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" name="Changes by david" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
-    <list id="7b71157d-c2fe-4cd2-b952-14728a9b92bd" name="Changes by Nir" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
+    <list id="7b71157d-c2fe-4cd2-b952-14728a9b92bd" name="Changes by Nir" comment="Changes by Nir" />
     <list id="ee98968f-d265-4b11-af7b-ca955b21d4ff" name="Changes by noama" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,84 +48,55 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/PremiumAccount.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="1" end1="2" start2="3" end2="4" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="3" end1="5" start2="5" end2="8" changelist="7b71157d-c2fe-4cd2-b952-14728a9b92bd" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Product.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="4" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="9" end1="11" start2="10" end2="13" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="13" end1="13" start2="15" end2="16" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="14" end1="14" start2="17" end2="27" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Customer.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="3" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="10" end1="10" start2="12" end2="14" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="23" end1="23" start2="27" end2="32" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Account.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="1" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="1" end1="1" start2="2" end2="3" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="3" end1="3" start2="5" end2="7" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="9" end1="9" start2="13" end2="14" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="11" end1="11" start2="16" end2="18" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="17" end1="17" start2="24" end2="30" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/User.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="3" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="4" end1="4" start2="6" end2="28" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-        <range start1="6" end1="6" start2="30" end2="32" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="9" end1="9" start2="35" end2="37" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
       <ranges>
-        <range start1="0" end1="0" start2="0" end2="4" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="4" end1="9" start2="8" end2="17" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="11" end1="13" start2="19" end2="20" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="21" end1="22" start2="28" end2="29" changelist="7b71157d-c2fe-4cd2-b952-14728a9b92bd" />
-        <range start1="24" end1="33" start2="31" end2="31" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="34" end1="36" start2="32" end2="38" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="38" end1="38" start2="40" end2="42" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="39" end1="39" start2="43" end2="44" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="41" end1="41" start2="46" end2="47" changelist="7b71157d-c2fe-4cd2-b952-14728a9b92bd" />
-        <range start1="42" end1="43" start2="48" end2="63" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-        <range start1="46" end1="47" start2="66" end2="67" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="53" end1="55" start2="73" end2="74" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="62" end1="63" start2="81" end2="82" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-        <range start1="65" end1="66" start2="84" end2="85" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="67" end1="68" start2="86" end2="99" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="69" end1="72" start2="100" end2="105" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="79" end1="80" start2="112" end2="127" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-        <range start1="84" end1="85" start2="131" end2="146" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-        <range start1="88" end1="89" start2="149" end2="154" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="92" end1="93" start2="157" end2="193" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="96" end1="97" start2="196" end2="281" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="99" end1="100" start2="283" end2="284" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="126" end1="126" start2="310" end2="322" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="127" end1="127" start2="323" end2="342" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="128" end1="130" start2="343" end2="345" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="131" end1="132" start2="346" end2="347" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="133" end1="134" start2="348" end2="349" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="172" end1="174" start2="387" end2="389" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="177" end1="177" start2="392" end2="458" changelist="7b71157d-c2fe-4cd2-b952-14728a9b92bd" />
+        <range start1="54" end1="54" start2="54" end2="60" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
+        <range start1="55" end1="55" start2="61" end2="80" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
+        <range start1="58" end1="59" start2="83" end2="85" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
+        <range start1="118" end1="119" start2="144" end2="145" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="150" end1="150" start2="176" end2="177" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="151" end1="151" start2="178" end2="181" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="211" end1="213" start2="241" end2="243" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
+        <range start1="275" end1="275" start2="305" end2="307" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
+        <range start1="277" end1="278" start2="309" end2="310" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="332" end1="332" start2="364" end2="378" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="344" end1="344" start2="390" end2="403" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/Supplier.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="2" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="1" end1="1" start2="3" end2="4" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="12" end1="12" start2="15" end2="21" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/main/java/Order.java">
       <ranges>
-        <range start1="3" end1="3" start2="3" end2="5" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="11" end1="11" start2="13" end2="15" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="16" end1="17" start2="20" end2="27" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
+        <range start1="0" end1="0" start2="0" end2="2" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="4" end1="4" start2="6" end2="8" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="21" end1="22" start2="25" end2="26" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="25" end1="25" start2="29" end2="39" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/Account.java">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="2" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="13" end1="14" start2="12" end2="18" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="24" end1="24" start2="28" end2="34" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/ShoppingCart.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="1" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="4" end1="4" start2="5" end2="6" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="9" end1="10" start2="11" end2="11" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="18" end1="18" start2="19" end2="31" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/Payment.java">
+      <ranges>
+        <range start1="9" end1="9" start2="9" end2="11" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="34" end1="34" start2="36" end2="40" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
       </ranges>
     </file>
   </component>
@@ -170,7 +135,8 @@
       <workItem from="1667565029887" duration="9404000" />
       <workItem from="1667602637285" duration="3619000" />
       <workItem from="1667637977373" duration="7240000" />
-      <workItem from="1667838163713" duration="11582000" />
+      <workItem from="1667838163713" duration="11879000" />
+      <workItem from="1667904376508" duration="4079000" />
     </task>
     <task id="LOCAL‎00001" summary="Basic skeleton of work">
       <created>1667569125405</created>
@@ -198,7 +164,35 @@
       <option name="project" value="LOCAL" />
       <updated>1667647816259</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Big day of work, lots of progress, more tomorrow. Keep updating Trello">
+      <created>1667851623333</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667851623333</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changes by danik">
+      <created>1667851636438</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667851636438</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes by david">
+      <created>1667851645226</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667851645226</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Changes by Nir">
+      <created>1667851653409</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667851653409</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +215,10 @@
     <MESSAGE value="P U SHH" />
     <MESSAGE value="Added basic constructors and addressed Product Constructor." />
     <MESSAGE value="Changes by Nir &amp; Noam &amp; Daniel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Nir &amp; Noam &amp; Daniel" />
+    <MESSAGE value="Big day of work, lots of progress, more tomorrow. Keep updating Trello" />
+    <MESSAGE value="Changes by danik" />
+    <MESSAGE value="Changes by david" />
+    <MESSAGE value="Changes by Nir" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by Nir" />
   </component>
 </project>

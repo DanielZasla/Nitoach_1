@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Vector;
 
 public class Account {
     static int AccCounter = 1;
@@ -11,7 +10,12 @@ public class Account {
     Date open;
     Date closed;
     int balance;
-    ArrayList<Order> Orders;
+
+    ArrayList<Order> Orders = new ArrayList<>();
+    ArrayList<Payment> Payments = new ArrayList<>();
+    Customer customer;
+    ShoppingCart cart;
+
     
     public Account(Customer c, String id, String billing_address, int balance) {
         this._id = String.format("account%d",AccCounter);

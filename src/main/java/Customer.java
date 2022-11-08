@@ -5,8 +5,8 @@ public class Customer {
     Address address;
     String phone;
     String email;
-    User user;
 
+    User user;
     Account account;
 
     public Customer(String id, Address address, String phone, String email) {

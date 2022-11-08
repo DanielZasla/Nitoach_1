@@ -1,13 +1,14 @@
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Vector;
 
 public class ShoppingCart {
+    ArrayList<LineItem> LItems = new ArrayList<>();
     static int ShopCCounter = 1;
     String _id;
     Date created;
     User user;
     Account acc;
-    Vector<LineItem> itmlist;
 
     public ShoppingCart(User user, Account acc) {
         this._id = String.format("shoppingCart%d",ShopCCounter);

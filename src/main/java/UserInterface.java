@@ -116,7 +116,7 @@ public class UserInterface {
             Account acc = getAccount(connected_user.getLogin_id());
             if (acc != null){
                 Order order = acc.Orders.get(0);
-                order.showOrder();
+                order.printDetails();
             }
             else{
                 System.out.println("DUBUG PRINT, USER WITH NO ACCOUNT, STINKY PROBLEM");
@@ -148,6 +148,10 @@ public class UserInterface {
         if(s != null){
             Product p = new Product(product_name,s);
             ProductList.add(p);
+            s.Products.add(p);
+        }
+        else{
+            System.out.println("No suppliers with that name exist.");
         }
     }
 
@@ -275,7 +279,7 @@ public class UserInterface {
                 }
         }
         if(!flag)
-            System.out.println("Id not found pls try again later");
+            System.out.println("Id not found please try again later");
     }
 
     // Private Methods for ArrayList Functionality
@@ -330,6 +334,20 @@ public class UserInterface {
         }
         return null;
     }
+
+    /**
+     * @param name ID of the Payment
+     * @return The Payment with the matching ID if exists, else null
+     */
+    private static Payment getPayment(String id){
+        for (Payment p : PaymentList){
+            if (p._id.equals(id)){
+                return p;
+            }
+        }
+        return null;
+    }
+
     /**
      * @param name Name of the Product
      * @return The Product with the matching name if exists, else null
@@ -338,6 +356,19 @@ public class UserInterface {
         for (Product p : ProductList){
             if (p.name.equals(name)){
                 return p;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * @param name ID of the ShoppingCart
+     * @return The ShoppingCart with the matching ID if exists, else null
+     */
+    private static ShoppingCart getShoppingCart(String id){
+        for (ShoppingCart s : ShoppingCartList){
+            if (s._id.equals(id)){
+                return s;
             }
         }
         return null;

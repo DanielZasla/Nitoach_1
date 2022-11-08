@@ -7,6 +7,8 @@ public abstract class Payment {
     Date paid;
     float total;
     String details;
+    Order order;
+    Account acc;
 
     public String getId(){
         return id;
