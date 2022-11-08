@@ -66,17 +66,19 @@ public class UserInterface {
                     premAccProdList.get(i).setPremacc(null);
                 }
             }
-            // TODO: delete all payments related to said account
-            // TODO: delete all orders on teh same account
-            for (Payment p : PaymentList){
-                if (p){
-
-                }
+            ArrayList<Order> OrderUserList = getAccount(id).getOrders();
+            ArrayList<Payment> PayUserList = getAccount(id).getPayments();
+            // Removing all payments related to the account
+            for (Payment p : PayUserList){
+                PaymentList.remove(p);
             }
+            // Removing all orders (and their payments) related to their account
             for (Order o : OrderList){
-                if (o){
-                    for (LineItem l : o.)
+                ArrayList<Payment> orderPayments = o.getPayments();
+                for (Payment p : orderPayments) {
+                    PaymentList.remove(p);
                 }
+                OrderList.remove(o);
             }
             AccountList.remove(getAccount(id));
             CustomerList.remove(user.getCustomer());
@@ -102,7 +104,9 @@ public class UserInterface {
     }
 
     private void CreateOrder(String address){
-        // TODO: Create Order
+        Address add = new Address(address);
+        Order newOrder = new Order("Number", add, 100);
+        OrderList.add(newOrder);
     }
 
     private void AddProductToOrder(String order_id, String login_id, String product_name){

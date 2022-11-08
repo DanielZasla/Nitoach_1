@@ -37,5 +37,9 @@ public class Order {
             System.out.println(payment._id);
         }
     }
+
+    public ArrayList<Payment> getPayments() {
+        return Payments;
+    }
 }
 
