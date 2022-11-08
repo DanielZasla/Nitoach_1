@@ -17,4 +17,16 @@ public class ShoppingCart {
         this.acc = acc;
         this.created = new Date();
     }
+
+    public ArrayList<LineItem> getLItems() {
+        return LItems;
+    }
+    public void printConnected(){
+        System.out.println("this Shopping Cart is connected to these Line Items:");
+        for (LineItem item:LItems) {
+            System.out.println(item._id);
+        }
+        System.out.println("this Shopping Cart is also connected to: "+ acc._id);
+        System.out.println("this Shopping Cart is also connected to: "+ user._id);
+    }
 }

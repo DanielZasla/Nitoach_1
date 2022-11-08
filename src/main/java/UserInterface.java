@@ -52,11 +52,37 @@ public class UserInterface {
                 return;
             }
             String id = user.getLogin_id();
+            // Here we delete all the line items that are related to this user's shopping cart
+            ArrayList<LineItem> LItemList = user.getCart().getLItems();
+            for (int i = 0; i < LItemList.size(); i++) {
+                LineItemList.remove(LItemList.get(0));
+            }
+            // Removing the shopping cart
             ShoppingCartList.remove(user.getCart());
+            // If it's a premium account, remove it from the products.
+            if (getAccount(id) instanceof PremiumAccount){
+                ArrayList<Product> premAccProdList = ((PremiumAccount) getAccount(id)).getProds();
+                for (int i=0; i< premAccProdList.size();i++){
+                    premAccProdList.get(i).setPremacc(null);
+                }
+            }
+            // TODO: delete all payments related to said account
+            // TODO: delete all orders on teh same account
+            for (Payment p : PaymentList){
+                if (p){
+
+                }
+            }
+            for (Order o : OrderList){
+                if (o){
+                    for (LineItem l : o.)
+                }
+            }
             AccountList.remove(getAccount(id));
             CustomerList.remove(user.getCustomer());
             UserList.remove(user);
-            System.out.println("User has been removed.");
+
+            System.out.println("User " + id + " has been removed.");
         }
     }
 
@@ -277,6 +303,8 @@ public class UserInterface {
                                 "\nState: " + user.state);
                     }
                 }
+            default:
+                System.out.println("Illegal character. Please choose a number between 1 to 9.");
         }
         if(!flag)
             System.out.println("Id not found please try again later");

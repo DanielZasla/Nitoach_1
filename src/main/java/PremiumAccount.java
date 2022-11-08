@@ -7,4 +7,8 @@ public class PremiumAccount extends Account{
         super(c, id, billing_address, balance);
         this.prods = new ArrayList<>();
     }
+
+    public ArrayList<Product> getProds() {
+        return prods;
+    }
 }
