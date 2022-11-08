@@ -38,4 +38,12 @@ public class Account {
             System.out.println(order._id);
         }
     }
+
+    public ArrayList<Order> getOrders() {
+        return Orders;
+    }
+
+    public ArrayList<Payment> getPayments() {
+        return Payments;
+    }
 }
