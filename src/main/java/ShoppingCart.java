@@ -10,11 +10,17 @@ public class ShoppingCart {
     User user;
     Account acc;
 
-    public ShoppingCart(User user, Account acc) {
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setAcc(Account acc) {
+        this.acc = acc;
+    }
+
+    public ShoppingCart() {
         this._id = String.format("shoppingCart%d",ShopCCounter);
         ShopCCounter++;
-        this.user = user;
-        this.acc = acc;
         this.created = new Date();
     }
 

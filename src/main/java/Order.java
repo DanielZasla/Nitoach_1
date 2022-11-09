@@ -28,6 +28,11 @@ public class Order {
 
     }
 
+    public void addItem(LineItem item){
+        LItems.add(item);
+        //TODO: Wait for forum clarification about updating payment.
+    }
+
 
     public void printConnected(){
         System.out.println("this Order is connected to these Line Items:");

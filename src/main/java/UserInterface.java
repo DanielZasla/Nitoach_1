@@ -110,9 +110,10 @@ public class UserInterface {
 
         User u = createUser(login_id);
         Customer c = createCustomer(login_id);
-        u.setCustomer(c);
-        Account a = createAccount(c, login_id);
-        ShoppingCart sc = createShoppingCart(u, a);
+        Account a = createAccount(login_id);
+        ShoppingCart sc = new ShoppingCart();
+
+        linkUserClasses(u,c,a,sc);
 
         UserList.add(u);
         CustomerList.add(c);
@@ -125,48 +126,41 @@ public class UserInterface {
 
     private void RemoveUser(String login_id){
         if (connected_user != null){
-            System.out.println("You must first log off the currently connected user in order to remove a user.");
-        } else {
-            User user = getUser(login_id);
-            if (user == null){
-                System.out.println("No such user exists");
-                return;
-            }
-            String id = user.getLogin_id();
-            // Here we delete all the line items that are related to this user's shopping cart
-            ArrayList<LineItem> LItemList = user.getCart().getLItems();
-            for (int i = 0; i < LItemList.size(); i++) {
-                LineItemList.remove(LItemList.get(0));
-            }
-            // Removing the shopping cart
-            ShoppingCartList.remove(user.getCart());
-            // If it's a premium account, remove it from the products.
-            if (getAccount(id) instanceof PremiumAccount){
-                ArrayList<Product> premAccProdList = ((PremiumAccount) getAccount(id)).getProds();
-                for (int i=0; i< premAccProdList.size();i++){
-                    premAccProdList.get(i).setPremacc(null);
-                }
-            }
-            ArrayList<Order> OrderUserList = getAccount(id).getOrders();
-            ArrayList<Payment> PayUserList = getAccount(id).getPayments();
-            // Removing all payments related to the account
-            for (Payment p : PayUserList){
-                PaymentList.remove(p);
-            }
-            // Removing all orders (and their payments) related to their account
-            for (Order o : OrderList){
-                ArrayList<Payment> orderPayments = o.getPayments();
-                for (Payment p : orderPayments) {
-                    PaymentList.remove(p);
-                }
-                OrderList.remove(o);
-            }
-            AccountList.remove(getAccount(id));
-            CustomerList.remove(user.getCustomer());
-            UserList.remove(user);
+            System.out.println("You must first log off the currently connected user in order to remove a user."); return;}
 
-            System.out.println("User " + id + " has been removed.");
+        User user = getUser(login_id);
+        Account acc = getAccount(login_id);
+
+        if (user == null){
+            System.out.println("No such user exists"); return;
         }
+
+
+        // Removing all payments related to the account
+        assert acc != null;
+        for (Payment p : acc.getPayments())
+            PaymentList.remove(p);
+
+        // Here we delete all the line items that are related to this user's shopping cart
+        for (LineItem l : user.getCart().getLItems())
+            LineItemList.remove(l);
+
+        // Removing all orders
+        for (Order o : acc.getOrders())
+            OrderList.remove(o);
+
+        // If it's a premium account, remove it from the products.
+        if (acc instanceof PremiumAccount)
+            for (Product p : ((PremiumAccount) acc).getProds())
+                p.setPremacc(null);
+
+        // Removing from the lists.
+        ShoppingCartList.remove(user.getCart());
+        AccountList.remove(acc);
+        CustomerList.remove(acc.customer);
+        UserList.remove(user);
+
+        System.out.println("User " + login_id + " has been removed.");
     }
 
     private void LoginUser(String login_id, String password){
@@ -199,7 +193,6 @@ public class UserInterface {
 
     private void AddProductToOrder(String order_id, String login_id, String product_name){
         Account a = getAccount(login_id);
-        //Order o = getOrder(order_id);
         Order o = null;
         if(a==null){
             System.out.println("The account you are looking does not exits."); return;
@@ -214,13 +207,23 @@ public class UserInterface {
         }
         Product p = getProduct(product_name);
         if(p==null){
-            System.out.println("The order " + o.number + " does not have an product with that number."); return;
+            System.out.println("Product doesn't exist."); return;
         }
-        /*if (a == null || o == null || p == null)
-            { System.out.println("One or more of the details doesn't exist."); return; }*/
-        if (a.is_closed)
-            { System.out.println("Account " + login_id + " is closed."); return; }
-        //TODO: Should add consideration to order status? Will continue after answer in forum.
+
+        int num = -1;
+        do {
+            System.out.print("Please enter a positive amount to purchase: ");
+            if (scanner.hasNextInt()) {
+                num = scanner.nextInt();
+            } else {
+                System.out.println("I need an int, please try again.");
+                scanner.nextLine();
+            }        } while (num <= 0);
+
+
+        //o.addItem(new LineItem());
+        //TODO: Should add consideration to order status? Will continue after answer in forum from Maximum Breakdance.
+        //TODO: How does this relate to shopping cart?
 
 
     }
@@ -325,85 +328,93 @@ public class UserInterface {
                 8) Supplier
                 9) User""");
         int pick = scanner.nextInt();
-        boolean flag = false;
         switch (pick){
             case 1:
                 for (Account account : AccountList) {
                     if(Objects.equals("account" + id, account._id)) {
-                        flag = true;
                         account.printDetails();
                         account.printConnected();
+                        return;
                     }
                 }
+                break;
             case 2:
                 for (Customer customer : CustomerList) {
                     if (Objects.equals("customer" + id, customer._id)) {
-                        flag = true;
-                       customer.printDetails();
-                       customer.printConnected();
+                        customer.printDetails();
+                        customer.printConnected();
+                        return;
                     }
                 }
+                break;
             case 3:
                 for (LineItem lineItem : LineItemList) {
                     if (Objects.equals("lineItem" + id, lineItem._id)) {
-                        flag = true;
                         lineItem.printDetails();
                         lineItem.printConnected();
+                        return;
                     }
                 }
+                break;
             case 4:
                 for (Order order : OrderList) {
                     if (Objects.equals("order" + id, order._id)) {
-                        flag = true;
                         order.printDetails();
                         order.printConnected();
+                        return;
                     }
                 }
-            case 5://TODO CHECK IF DELAYED OR IMMEDIATE TO PRINT THEIR ADDITIONAL VARIABLES
-                for (Payment payment : PaymentList) {
+                break;
+            case 5:
+                for (Payment payment : PaymentList) { //TODO: Check print is valid for each type of payment via testing later.
                     if (Objects.equals("payment" + id, payment._id)) {
-                        flag = true;
                         payment.printDetails();
                         payment.printConnected();
+                        return;
                     }
                 }
+                break;
             case 6:
                 for (Product product : ProductList) {
                     if (Objects.equals("product" + id, product._id)) {
-                        flag = true;
                         product.printDetails();
                         product.printConnected();
+                        return;
                     }
                 }
+                break;
             case 7:
                 for (ShoppingCart shoppingCart : ShoppingCartList) {
                     if (Objects.equals("shoppingCart" + id, shoppingCart._id)) {
-                        flag = true;
                         shoppingCart.printDetails();
                         shoppingCart.printConnected();
+                        return;
                     }
                 }
+                break;
             case 8:
-                for (Product product : ProductList) {
-                    if (Objects.equals("product" + id, product._id)) {
-                        flag = true;
-                        product.printDetails();
-                        product.printConnected();
+                for (Supplier supplier : SupplierList) {
+                    if (Objects.equals("supplier" + id, supplier._id)) {
+                        supplier.printDetails();
+                        supplier.printConnected();
+                        return;
                     }
                 }
+                break;
             case 9:
                 for (User user : UserList) {
                     if (Objects.equals("user" + id, user._id)) {
-                        flag = true;
                         user.printDetails();
                         user.printConnected();
+                        return;
                     }
                 }
+                break;
             default:
-                System.out.println("Illegal character. Please choose a number between 1 to 9.");
+                System.out.println("Illegal character.");
+                return;
         }
-        if(!flag)
-            System.out.println("Id not found please try again later");
+        System.out.println("ID not found.");
     }
 
     // Private Methods for ArrayList Functionality
@@ -567,12 +578,11 @@ public class UserInterface {
     }
 
     /**
-     * Creates a Account with the user's given information.
-     * @param c Customer to connect to.
+     * Creates an Account with the user's given information.
      * @param login_id Given ID.
      * @return Account
      */
-    private Account createAccount(Customer c, String login_id){
+    private Account createAccount(String login_id){
         System.out.println("Creating account (ID: " + login_id + "):");
         System.out.println("Enter billing address: ");
         String billingaddress = scanner.nextLine();
@@ -583,23 +593,24 @@ public class UserInterface {
             System.out.println("Would you like to sign up to our Premium Account program? (y/n)");
             premium = scanner.nextLine();
             if (premium.equalsIgnoreCase("y"))
-                return new PremiumAccount(c, login_id, billingaddress, balance);
+                return new PremiumAccount(login_id, billingaddress, balance);
             else if (premium.equalsIgnoreCase("n")) {
-                return new Account(c, login_id, billingaddress, balance);
+                return new Account(login_id, billingaddress, balance);
             }
             else
                 System.out.println("Invalid input.");
         }
     }
 
-    /**
-     * Creates a ShoppingCart with the user's given information.
-     * @param u User to connect to.
-     * @param a Account to connect to.
-     * @return ShoppingCart
-     */
-    private ShoppingCart createShoppingCart(User u, Account a){
-        return new ShoppingCart(u, a);
+    private void linkUserClasses(User u, Customer c, Account a, ShoppingCart s){
+        u.setCustomer(c);
+        u.setCart(s);
+        c.setUser(u);
+        c.setAccount(a);
+        a.setCart(s);
+        a.setCustomer(c);
+        s.setAcc(a);
+        s.setUser(u);
     }
 
 }

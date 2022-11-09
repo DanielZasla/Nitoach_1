@@ -1,7 +1,7 @@
 import java.util.Date;
 
 public abstract class Payment {
-    static int PayCounter;
+    static int PayCounter = 1;
     String _id;
     String id;
     Date paid;

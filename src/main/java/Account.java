@@ -16,8 +16,15 @@ public class Account {
     Customer customer;
     ShoppingCart cart;
 
-    
-    public Account(Customer c, String id, String billing_address, int balance) {
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public void setCart(ShoppingCart cart) {
+        this.cart = cart;
+    }
+
+    public Account(String id, String billing_address, int balance) {
         this._id = String.format("account%d",AccCounter);
         AccCounter++;
         this.id = id;

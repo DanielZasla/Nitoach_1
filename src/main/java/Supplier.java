@@ -19,4 +19,8 @@ public class Supplier {
             System.out.println(product._id);
         }
     }
+
+    public void printDetails() {
+        System.out.println("Id: "+ id+"\nName: " + name);
+    }
 }

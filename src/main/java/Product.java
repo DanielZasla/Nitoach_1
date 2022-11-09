@@ -35,7 +35,7 @@ public class Product {
     }
 
     public void printDetails() {
-        System.out.println(_id+"\nName: " + name);
+        System.out.println("ID: " + _id+"\nName: " + name);
     }
     public void printConnected(){
         System.out.println("this product is connected to these Line Items:");

@@ -4,14 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="Big day of work, lots of progress, more tomorrow. Keep updating Trello">
+    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="Big push:&#10;*Changed constructors &amp; set/get of:&#10; -Account&#10; -Premium Account&#10; -ShoppingCart&#10;*Finished, simplified and/or cleared code in UserInterface:&#10; -ShowObjectId&#10; -createAccount&#10; -AddUser&#10; -AddProductToOrder&#10;*Completely reworked RemoveUser&#10;*Added linkUserClasses&#10;*Minor typos and bugs fixed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Supplier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="26722f3d-914b-4fa4-aab8-4749d2bfc64a" name="Changes by danik" comment="Changes by danik" />
     <list id="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" name="Changes by david" comment="Changes by david" />
     <list id="7b71157d-c2fe-4cd2-b952-14728a9b92bd" name="Changes by Nir" comment="Changes by Nir" />
-    <list id="ee98968f-d265-4b11-af7b-ca955b21d4ff" name="Changes by noama" comment="" />
+    <list id="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" name="Changes by noama" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/LineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LineItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +40,59 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
+      <ranges>
+        <range start1="112" end1="115" start2="112" end2="116" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="127" end1="166" start2="128" end2="161" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="167" end1="169" start2="162" end2="163" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="201" end1="202" start2="195" end2="195" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="216" end1="217" start2="209" end2="210" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="218" end1="223" start2="211" end2="226" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="327" end1="328" start2="330" end2="330" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="332" end1="333" start2="334" end2="334" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="335" end1="335" start2="336" end2="337" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="337" end1="337" start2="339" end2="340" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="340" end1="343" start2="343" end2="346" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="345" end1="345" start2="348" end2="349" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="348" end1="349" start2="352" end2="352" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="351" end1="351" start2="354" end2="355" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="353" end1="353" start2="357" end2="358" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="356" end1="357" start2="361" end2="361" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="359" end1="359" start2="363" end2="364" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="361" end1="363" start2="366" end2="369" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="364" end1="365" start2="370" end2="370" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="367" end1="367" start2="372" end2="373" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="369" end1="369" start2="375" end2="376" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="372" end1="373" start2="379" end2="379" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="375" end1="375" start2="381" end2="382" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="377" end1="377" start2="384" end2="385" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="380" end1="381" start2="388" end2="388" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="383" end1="383" start2="390" end2="391" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="385" end1="385" start2="393" end2="394" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="386" end1="391" start2="395" end2="400" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="393" end1="393" start2="402" end2="403" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="396" end1="397" start2="406" end2="406" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="399" end1="399" start2="408" end2="409" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="401" end1="401" start2="411" end2="412" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="402" end1="403" start2="413" end2="415" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="404" end1="406" start2="416" end2="417" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="462" end1="463" start2="473" end2="474" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+        <range start1="488" end1="489" start2="499" end2="500" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+        <range start1="574" end1="575" start2="585" end2="586" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="585" end1="586" start2="596" end2="597" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="587" end1="588" start2="598" end2="599" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="594" end1="602" start2="605" end2="614" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="603" end1="603" start2="615" end2="616" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/Payment.java">
+      <ranges>
+        <range start1="3" end1="4" start2="3" end2="4" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="36" end1="36" start2="36" end2="37" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -66,6 +131,7 @@
       <workItem from="1667637977373" duration="7240000" />
       <workItem from="1667838163713" duration="11879000" />
       <workItem from="1667904376508" duration="4079000" />
+      <workItem from="1668006449469" duration="8491000" />
     </task>
     <task id="LOCAL‎00001" summary="Basic skeleton of work">
       <created>1667569125405</created>
@@ -121,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667851653409</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Logout user &amp; in Login: Changed check if user is connected before requesting details.">
+      <created>1667990149730</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667990149730</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +232,8 @@
     <MESSAGE value="Changes by danik" />
     <MESSAGE value="Changes by david" />
     <MESSAGE value="Changes by Nir" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Nir" />
+    <MESSAGE value="Logout user &amp; in Login: Changed check if user is connected before requesting details." />
+    <MESSAGE value="Big push:&#10;*Changed constructors &amp; set/get of:&#10; -Account&#10; -Premium Account&#10; -ShoppingCart&#10;*Finished, simplified and/or cleared code in UserInterface:&#10; -ShowObjectId&#10; -createAccount&#10; -AddUser&#10; -AddProductToOrder&#10;*Completely reworked RemoveUser&#10;*Added linkUserClasses&#10;*Minor typos and bugs fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Big push:&#10;*Changed constructors &amp; set/get of:&#10; -Account&#10; -Premium Account&#10; -ShoppingCart&#10;*Finished, simplified and/or cleared code in UserInterface:&#10; -ShowObjectId&#10; -createAccount&#10; -AddUser&#10; -AddProductToOrder&#10;*Completely reworked RemoveUser&#10;*Added linkUserClasses&#10;*Minor typos and bugs fixed." />
   </component>
 </project>
