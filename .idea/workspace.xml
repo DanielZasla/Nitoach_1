@@ -6,29 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="Big day of work, lots of progress, more tomorrow. Keep updating Trello">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Supplier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
-    <list id="26722f3d-914b-4fa4-aab8-4749d2bfc64a" name="Changes by danik" comment="Changes by danik">
-      <change beforePath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PremiumAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
-    <list id="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" name="Changes by david" comment="Changes by david">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LineItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
+    <list id="26722f3d-914b-4fa4-aab8-4749d2bfc64a" name="Changes by danik" comment="Changes by danik" />
+    <list id="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" name="Changes by david" comment="Changes by david" />
     <list id="7b71157d-c2fe-4cd2-b952-14728a9b92bd" name="Changes by Nir" comment="Changes by Nir" />
     <list id="ee98968f-d265-4b11-af7b-ca955b21d4ff" name="Changes by noama" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,59 +27,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
-      <ranges>
-        <range start1="54" end1="54" start2="54" end2="60" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-        <range start1="55" end1="55" start2="61" end2="80" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-        <range start1="58" end1="59" start2="83" end2="85" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-        <range start1="118" end1="119" start2="144" end2="145" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="150" end1="150" start2="176" end2="177" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="151" end1="151" start2="178" end2="181" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="211" end1="213" start2="241" end2="243" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="275" end1="275" start2="305" end2="307" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-        <range start1="277" end1="278" start2="309" end2="310" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="332" end1="332" start2="364" end2="378" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="344" end1="344" start2="390" end2="403" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Supplier.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="1" end1="1" start2="3" end2="4" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="12" end1="12" start2="15" end2="21" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Order.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="4" end1="4" start2="6" end2="8" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="21" end1="22" start2="25" end2="26" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="25" end1="25" start2="29" end2="39" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Account.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="2" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="13" end1="14" start2="12" end2="18" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="24" end1="24" start2="28" end2="34" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/ShoppingCart.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="1" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="4" end1="4" start2="5" end2="6" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="9" end1="10" start2="11" end2="11" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="18" end1="18" start2="19" end2="31" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Payment.java">
-      <ranges>
-        <range start1="9" end1="9" start2="9" end2="11" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="34" end1="34" start2="36" end2="40" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-      </ranges>
-    </file>
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -197,6 +126,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

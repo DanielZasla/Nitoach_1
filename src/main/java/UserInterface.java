@@ -47,13 +47,17 @@ public class UserInterface {
                     loginId = scanner.next();
                     RemoveUser(loginId);
                 case 3:
+                    if (connected_user!=null){
+                        System.out.println("A different user is connected right now.");
+                        break;
+                    }
                     System.out.println("Please enter login id for the user: ");
                     loginId = scanner.next();
                     System.out.println("Please enter the password for this user");
                     String password = scanner.next();
                     LoginUser(loginId,password);
-                case 4://TODO continue after implemented
-
+                case 4:
+                    LogoutUser();
 
                 case 5://TODO continue after implemented
 
@@ -166,10 +170,7 @@ public class UserInterface {
     }
 
     private void LoginUser(String login_id, String password){
-        if (connected_user!=null){
-            System.out.println("A different user is connected right now.");
-            return;
-        }
+
         User user;
         if ((user = getUser(login_id)) != null){
             if (user.password.equals(password)) {
@@ -178,6 +179,16 @@ public class UserInterface {
             }
         }
         System.out.println("Login details are incorrect.");
+    }
+
+    private void LogoutUser(){
+        if (connected_user == null)
+            System.out.println("No user is logged in.");
+        else
+        {
+            connected_user = null;
+            System.out.println("User logged out successfully.");
+        }
     }
 
     private void CreateOrder(String address){
