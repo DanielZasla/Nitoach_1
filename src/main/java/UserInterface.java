@@ -666,6 +666,7 @@ public class UserInterface {
         int balance = scanner.nextInt();
         String premium;
         while(true){
+            scanner.nextLine();
             System.out.println("Would you like to sign up to our Premium Account program? (y/n)");
             premium = scanner.nextLine();
             if (premium.equalsIgnoreCase("y"))
