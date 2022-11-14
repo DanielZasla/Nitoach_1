@@ -17,6 +17,7 @@ public class UserInterface {
     private User connected_user;
 
 
+
     public void run() {
         PopulateSystem();
         Scanner scanner = new Scanner(System.in);
@@ -42,13 +43,15 @@ public class UserInterface {
                     System.out.println("Please enter login id for the new user: ");
                     String loginId = scanner.next();
                     AddUser(loginId);
+                    break;
                 case 2:
                     System.out.println("Please enter login id for the user you want to remove: ");
                     loginId = scanner.next();
                     RemoveUser(loginId);
+                    break;
                 case 3:
-                    if (connected_user!=null){
-                        System.out.println("A different user is connected right now.");
+                    if (isConnected()){
+                        System.out.println("A different user is connected now.");
                         break;
                     }
                     System.out.println("Please enter login id for the user: ");
@@ -56,6 +59,7 @@ public class UserInterface {
                     System.out.println("Please enter the password for this user");
                     String password = scanner.next();
                     LoginUser(loginId,password);
+                    break;
                 case 4:
                     LogoutUser();
 
@@ -63,41 +67,56 @@ public class UserInterface {
 
 
                 case 6:
-                    System.out.println("Please enter the order id: ");
-                    String orderId = scanner.next();
-                    System.out.println("Please enter login id for the user: ");
-                    loginId = scanner.next();
-                    System.out.println("Please enter the Product name:");
-                    String productName = scanner.next();
-                    AddProductToOrder(orderId,loginId,productName);
+                    if (isConnected()){
+                        System.out.println("Please enter the order id: ");
+                        orderId = scanner.next();
+                        System.out.println("Please enter login id for the user: ");
+                        loginId = scanner.next();
+                        System.out.println("Please enter the Product name:");
+                        productName = scanner.next();
+                        AddProductToOrder(orderId,loginId,productName);
+                    } else {
+                        System.out.println("No user is connected at the moment.");
+                    }
+
+                    break;
                 case 7:
                     DisplayOrder();
+                    break;
                 case 8:
-                    System.out.println("Please enter the Product name:");
-                    productName = scanner.next();
-                    System.out.println("Please enter the price: ");
-                    int price = scanner.nextInt();
-                    System.out.println("Please enter the quantity: ");
-                    int quantity = scanner.nextInt();
-                    LinkProduct(productName,price,quantity);
+                    if(isConnected()){
+                        System.out.println("Please enter the Product name:");
+                        productName = scanner.next();
+                        System.out.println("Please enter the price: ");
+                        int price = scanner.nextInt();
+                        System.out.println("Please enter the quantity: ");
+                        int quantity = scanner.nextInt();
+                        LinkProduct(productName,price,quantity);
+                    } else {
+                        System.out.println("No user is connected at the moment.");
+                    }
+                    break;
                 case 9:
                     System.out.println("Please enter the Product name:");
                     productName = scanner.next();
                     System.out.println("Please enter the supplier name:");
                     String supplierName = scanner.next();
                     AddProduct(productName,supplierName);
+                    break;
                 case 10:
                     System.out.println("Please enter the Product name:");
                     productName = scanner.next();
                     //TODO continue when implemented
                 case 11:
                     ShowAllObjects();
+                    break;
                 case 12:
                     System.out.println("Please enter Id:");
                     String id = scanner.next();
                     ShowObjectId(id);
-                case 0:
                     break;
+                case 0:
+                    return;
             }
         }
     }
@@ -210,40 +229,32 @@ public class UserInterface {
             System.out.println("Product doesn't exist."); return;
         }
 
-        int num = -1;
-        do {
-            System.out.print("Please enter a positive amount to purchase: ");
-            if (scanner.hasNextInt()) {
-                num = scanner.nextInt();
-            } else {
-                System.out.println("I need an int, please try again.");
-                scanner.nextLine();
-            }        } while (num <= 0);
 
+        LineItem item = new LineItem(p);
+        if (item.price > a.balance){
+            System.out.println("Insufficient balance in the account to order the product."); return;
+        }
 
-        //o.addItem(new LineItem());
-        //TODO: Should add consideration to order status? Will continue after answer in forum from Maximum Breakdance.
-        //TODO: How does this relate to shopping cart?
-
+        o.addItem(item);
+        p.premacc.balance += p.price;
+        item.order = o;
+        a.shoppingCart.addItem(item);
+        item.shoppingCart = a.shoppingCart;
 
     }
 
-    private void DisplayOrder(){ // TODO figure out if we are creating n LineItems to 1 Order to n Payments or not, Future
+    private void DisplayOrder(){
         if (connected_user == null){
-            System.out.println("No user is connected! Please log in to display order.");
-        }
-        else {
-            System.out.println("Here is the last order you placed:");
-            Account acc = getAccount(connected_user.getLogin_id());
-            if (acc != null){
-                Order order = acc.Orders.get(0);
-                order.printDetails();
-            }
-            else{
-                System.out.println("DUBUG PRINT, USER WITH NO ACCOUNT, STINKY PROBLEM");
-            }
-        }
+            System.out.println("No user is connected. Please log in to display order."); return; }
 
+
+        Order o = connected_user.getCustomer().getAccount().getLastOrder();
+        if (o == null)
+            System.out.println("Connected user has no orders in its account.");
+        else {
+            System.out.println("Last placed order:");
+            o.printDetails();
+        }
     }
 
     private void LinkProduct(String product_name, int price, int quantity){
@@ -261,7 +272,8 @@ public class UserInterface {
             System.out.println("This product is already linked to another Premium user.");
         }
         ((PremiumAccount) acc).prods.add(prod);
-        //TODO: LOOK FOR CLARIFICATION ON FORUM OR MAIL OR NEW VERSION OF ASSIGNMENT DOC
+        prod.price = price;
+        prod.quantity = quantity;
     }
 
     private void AddProduct(String product_name, String supplier_name){
@@ -366,7 +378,7 @@ public class UserInterface {
                 }
                 break;
             case 5:
-                for (Payment payment : PaymentList) { //TODO: Check print is valid for each type of payment via testing later.
+                for (Payment payment : PaymentList) {
                     if (Objects.equals("payment" + id, payment._id)) {
                         payment.printDetails();
                         payment.printConnected();
@@ -607,10 +619,14 @@ public class UserInterface {
         u.setCart(s);
         c.setUser(u);
         c.setAccount(a);
-        a.setCart(s);
+        a.setShoppingCart(s);
         a.setCustomer(c);
         s.setAcc(a);
         s.setUser(u);
+    }
+
+    private boolean isConnected(){
+        return connected_user!=null;
     }
 
 }

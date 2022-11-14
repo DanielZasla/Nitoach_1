@@ -18,6 +18,14 @@ public class Product {
         this.premacc = null;
     }
 
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     public boolean Link(PremiumAccount prem){
         if (premacc != null){
             return false;

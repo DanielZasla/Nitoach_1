@@ -14,14 +14,18 @@ public class Account {
     ArrayList<Order> Orders = new ArrayList<>();
     ArrayList<Payment> Payments = new ArrayList<>();
     Customer customer;
-    ShoppingCart cart;
+    ShoppingCart shoppingCart;
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 
-    public void setCart(ShoppingCart cart) {
-        this.cart = cart;
+    public void setShoppingCart(ShoppingCart shoppingCart) {
+        this.shoppingCart = shoppingCart;
+    }
+
+    public Order getLastOrder(){
+        return getOrders().get(Orders.size() - 1);
     }
 
     public Account(String id, String billing_address, int balance) {

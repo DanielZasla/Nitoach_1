@@ -1,6 +1,7 @@
 import javax.sound.sampled.Line;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Order {
     static int OrdCounter = 1;
@@ -29,6 +30,18 @@ public class Order {
     }
 
     public void addItem(LineItem item){
+        System.out.println("Immediate payment(default) or delayed payment? (I/D)");
+        Scanner scanner = new Scanner(System.in);
+        String answer = scanner.nextLine();
+        Payment p;
+        if (answer.equalsIgnoreCase("d"))
+            p = new DelayedPayment();
+        else {
+            p = new ImmediatePayment();
+            account.balance -= item.price;
+        }
+
+        Payments.add(p);
         LItems.add(item);
         //TODO: Wait for forum clarification about updating payment.
     }

@@ -10,9 +10,9 @@ public class LineItem {
     public LineItem(int quantity, int price, Product product) {
         this._id = String.format("lineItem%d",LineItemCounter);
         LineItemCounter++;
-        this.quantity = quantity;
-        this.price = price;
-        this.product = product;
+        this.quantity = p.quantity;
+        this.price = p.price;
+        this.product = p;
     }
 
     public void printDetails() {

@@ -1,3 +1,4 @@
+import javax.sound.sampled.Line;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Vector;
@@ -22,6 +23,10 @@ public class ShoppingCart {
         this._id = String.format("shoppingCart%d",ShopCCounter);
         ShopCCounter++;
         this.created = new Date();
+    }
+
+    public void addItem(LineItem item){
+        LItems.add(item);
     }
 
     public ArrayList<LineItem> getLItems() {
