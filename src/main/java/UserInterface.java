@@ -234,7 +234,7 @@ public class UserInterface {
     private void AddProductToOrder(String order_id, String login_id, String product_name){
         Account prem = getAccount(login_id);
         Account me = connected_user.getCustomer().getAccount();
-
+        int x = 0;
         Order o = null;
         if(prem==null){
             System.out.println("The account you are looking does not exits."); return;
