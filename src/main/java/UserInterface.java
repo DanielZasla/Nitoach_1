@@ -226,41 +226,44 @@ public class UserInterface {
     private void CreateOrder(String address){
         Address add = new Address(address);
         Account acc = connected_user.getCustomer().getAccount();
-        Order newOrder = new Order("Number", add, acc);
+        Order newOrder = new Order(add, acc);
         acc.getOrders().add(newOrder);
         OrderList.add(newOrder);
     }
 
     private void AddProductToOrder(String order_id, String login_id, String product_name){
-        Account a = getAccount(login_id);
+        Account prem = getAccount(login_id);
+        Account me = connected_user.getCustomer().getAccount();
+
         Order o = null;
-        if(a==null){
+        if(prem==null){
             System.out.println("The account you are looking does not exits."); return;
         }
-        for(Order ord: a.Orders){
+
+        for(Order ord: me.Orders){
             if(ord.number.equals(order_id)){
                 o = ord;
             }
         }
         if(o==null){
-            System.out.println("The account " + a.id + " does not have an order with that number."); return;
+            System.out.println("The account " + me.id + " does not have an order with that number."); return;
         }
+
         Product p = getProduct(product_name);
         if(p==null || p.premacc == null){
             System.out.println("Product doesn't exist or isn't linked to a premium account."); return;
         }
 
-
         LineItem item = new LineItem(p);
-        if (item.price > a.balance){
+        if (item.price > me.balance){
             System.out.println("Insufficient balance in the account to order the product."); return;
         }
 
         o.addItem(item);
         p.premacc.balance += p.price;
         item.order = o;
-        a.shoppingCart.addItem(item);
-        item.shoppingCart = a.shoppingCart;
+        me.shoppingCart.addItem(item);
+        item.shoppingCart = me.shoppingCart;
 
     }
 

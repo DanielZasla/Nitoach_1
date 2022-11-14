@@ -16,10 +16,10 @@ public class Order {
     Account account;
     float total;
 
-    public Order(String number, Address ship_to, Account acc) {
+    public Order( Address ship_to, Account acc) {
         this._id = String.format("order%d", OrdCounter);
+        this.number = String.valueOf(OrdCounter);
         OrdCounter++;
-        this.number = number;
         this.ship_to = ship_to;
         this.status = OrderStatus.New;
         this.total = 0;
