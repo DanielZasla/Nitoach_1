@@ -612,6 +612,14 @@ public class UserInterface {
         bamba.price = 1;
         bamba.quantity = 1;
         bamba.premacc = danaA;
+        UserList.add(danaU);
+        UserList.add(daniU);
+        CustomerList.add(danaC);
+        CustomerList.add(daniC);
+        AccountList.add(danaA);
+        AccountList.add(daniA);
+        ShoppingCartList.add(danaSC);
+        ShoppingCartList.add(daniSC);
 
     }
 
