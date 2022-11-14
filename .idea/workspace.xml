@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="Big push:&#10;*Changed constructors &amp; set/get of:&#10; -Account&#10; -Premium Account&#10; -ShoppingCart&#10;*Finished, simplified and/or cleared code in UserInterface:&#10; -ShowObjectId&#10; -createAccount&#10; -AddUser&#10; -AddProductToOrder&#10;*Completely reworked RemoveUser&#10;*Added linkUserClasses&#10;*Minor typos and bugs fixed.">
+    <list default="true" id="46a98f59-ac90-47ba-b197-baa016d8bf56" name="Changes" comment="Buncho stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LineItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShoppingCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="26722f3d-914b-4fa4-aab8-4749d2bfc64a" name="Changes by danik" comment="Changes by danik">
@@ -47,74 +42,28 @@
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/Product.java">
-      <ranges>
-        <range start1="8" end1="8" start2="8" end2="10" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="18" end1="18" start2="20" end2="22" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="19" end1="19" start2="23" end2="31" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/LineItem.java">
-      <ranges>
-        <range start1="7" end1="8" start2="7" end2="8" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="9" end1="10" start2="9" end2="10" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="12" end1="15" start2="12" end2="15" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="23" end1="24" start2="23" end2="24" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
       <ranges>
-        <range start1="17" end1="17" start2="17" end2="18" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="18" end1="18" start2="19" end2="24" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="20" end1="20" start2="26" end2="27" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="40" end1="40" start2="47" end2="50" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="42" end1="43" start2="52" end2="53" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="44" end1="44" start2="54" end2="55" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="48" end1="48" start2="59" end2="60" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="49" end1="51" start2="61" end2="63" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="56" end1="57" start2="68" end2="69" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="58" end1="58" start2="70" end2="71" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="60" end1="62" start2="73" end2="82" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="63" end1="64" start2="83" end2="84" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="65" end1="72" start2="85" end2="98" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="74" end1="74" start2="100" end2="101" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="75" end1="82" start2="102" end2="114" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="86" end1="87" start2="118" end2="119" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="88" end1="88" start2="120" end2="121" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="91" end1="92" start2="124" end2="126" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-        <range start1="94" end1="94" start2="128" end2="129" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="98" end1="98" start2="133" end2="134" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="99" end1="100" start2="135" end2="136" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="125" end1="125" start2="161" end2="162" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
-        <range start1="189" end1="190" start2="226" end2="229" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="208" end1="210" start2="247" end2="249" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="212" end1="221" start2="251" end2="251" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="222" end1="222" start2="252" end2="256" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="223" end1="227" start2="257" end2="262" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="230" end1="231" start2="265" end2="266" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="232" end1="234" start2="267" end2="273" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="235" end1="246" start2="274" end2="277" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="263" end1="264" start2="294" end2="296" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="316" end1="316" start2="348" end2="369" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
-        <range start1="368" end1="369" start2="421" end2="422" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="473" end1="474" start2="526" end2="527" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="499" end1="500" start2="552" end2="553" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="540" end1="541" start2="593" end2="594" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="543" end1="544" start2="596" end2="598" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="545" end1="547" start2="599" end2="614" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="609" end1="610" start2="676" end2="677" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="614" end1="614" start2="681" end2="685" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="615" end1="615" start2="686" end2="687" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Order.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="14" end1="14" start2="15" end2="16" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="16" end1="17" start2="18" end2="19" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="22" end1="23" start2="24" end2="26" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
-        <range start1="31" end1="31" start2="34" end2="46" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
-        <range start1="32" end1="33" start2="47" end2="47" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+        <range start1="19" end1="19" start2="19" end2="24" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+        <range start1="21" end1="21" start2="26" end2="27" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
+        <range start1="41" end1="41" start2="47" end2="50" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
+        <range start1="43" end1="44" start2="52" end2="53" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
+        <range start1="59" end1="60" start2="68" end2="69" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
+        <range start1="64" end1="66" start2="73" end2="82" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
+        <range start1="67" end1="68" start2="83" end2="84" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
+        <range start1="102" end1="103" start2="118" end2="119" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
+        <range start1="108" end1="109" start2="124" end2="126" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
+        <range start1="120" end1="120" start2="137" end2="138" changelist="46a98f59-ac90-47ba-b197-baa016d8bf56" />
+        <range start1="144" end1="144" start2="162" end2="163" changelist="26722f3d-914b-4fa4-aab8-4749d2bfc64a" />
+        <range start1="208" end1="209" start2="227" end2="230" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+        <range start1="227" end1="229" start2="248" end2="250" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+        <range start1="328" end1="328" start2="349" end2="370" changelist="ee09e04e-b2a9-4f45-8878-d8dbf38ff0c6" />
+        <range start1="485" end1="486" start2="527" end2="528" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+        <range start1="511" end1="512" start2="553" end2="554" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+        <range start1="552" end1="553" start2="594" end2="595" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+        <range start1="555" end1="556" start2="597" end2="599" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+        <range start1="557" end1="559" start2="600" end2="615" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
+        <range start1="631" end1="631" start2="687" end2="688" changelist="5ab4b4c8-8670-4b63-8350-a52abc37f0c0" />
       </ranges>
     </file>
   </component>
@@ -143,6 +92,20 @@
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="UserInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UserInterface" />
+      <module name="Nitoach" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UserInterface" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -157,7 +120,7 @@
       <workItem from="1667838163713" duration="11879000" />
       <workItem from="1667904376508" duration="4079000" />
       <workItem from="1668006449469" duration="8669000" />
-      <workItem from="1668438437483" duration="6460000" />
+      <workItem from="1668438437483" duration="6787000" />
     </task>
     <task id="LOCAL‎00001" summary="Basic skeleton of work">
       <created>1667569125405</created>
@@ -227,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668018954834</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Buncho stuff">
+      <created>1668445046321</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668445046321</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +237,7 @@
     <MESSAGE value="Changes by Nir" />
     <MESSAGE value="Logout user &amp; in Login: Changed check if user is connected before requesting details." />
     <MESSAGE value="Big push:&#10;*Changed constructors &amp; set/get of:&#10; -Account&#10; -Premium Account&#10; -ShoppingCart&#10;*Finished, simplified and/or cleared code in UserInterface:&#10; -ShowObjectId&#10; -createAccount&#10; -AddUser&#10; -AddProductToOrder&#10;*Completely reworked RemoveUser&#10;*Added linkUserClasses&#10;*Minor typos and bugs fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Big push:&#10;*Changed constructors &amp; set/get of:&#10; -Account&#10; -Premium Account&#10; -ShoppingCart&#10;*Finished, simplified and/or cleared code in UserInterface:&#10; -ShowObjectId&#10; -createAccount&#10; -AddUser&#10; -AddProductToOrder&#10;*Completely reworked RemoveUser&#10;*Added linkUserClasses&#10;*Minor typos and bugs fixed." />
+    <MESSAGE value="Buncho stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Buncho stuff" />
   </component>
 </project>

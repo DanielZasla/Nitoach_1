@@ -118,6 +118,7 @@ public class UserInterface {
                 case 0:
                     return;
             }
+            System.out.println("\n\n");
         }
     }
 
