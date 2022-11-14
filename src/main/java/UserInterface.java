@@ -33,7 +33,7 @@ public class UserInterface {
                     2) Remove User
                     3) Login User
                     4) Logout User
-                    5) Creat New Order
+                    5) Create New Order
                     6) Add Product To Order
                     7) Display Order
                     8) Link Product
@@ -175,17 +175,18 @@ public class UserInterface {
 
 
         // Removing all payments related to the account
-        assert acc != null;
-        for (Payment p : acc.getPayments())
-            PaymentList.remove(p);
+        if (acc != null)
+            for (Payment p : acc.getPayments())
+                PaymentList.remove(p);
 
         // Here we delete all the line items that are related to this user's shopping cart
         for (LineItem l : user.getCart().getLItems())
             LineItemList.remove(l);
 
         // Removing all orders
-        for (Order o : acc.getOrders())
-            OrderList.remove(o);
+        if (acc != null)
+            for (Order o : acc.getOrders())
+                OrderList.remove(o);
 
         // If it's a premium account, remove it from the products.
         if (acc instanceof PremiumAccount)
@@ -234,7 +235,6 @@ public class UserInterface {
     private void AddProductToOrder(String order_id, String login_id, String product_name){
         Account prem = getAccount(login_id);
         Account me = connected_user.getCustomer().getAccount();
-        int x = 0;
         Order o = null;
         if(prem==null){
             System.out.println("The account you are looking does not exits."); return;
@@ -259,11 +259,14 @@ public class UserInterface {
             System.out.println("Insufficient balance in the account to order the product."); return;
         }
 
-        o.addItem(item);
+        Payment payment = o.addItem(item);
+        PaymentList.add(payment);
         p.premacc.balance += p.price;
-        item.order = o;
         me.shoppingCart.addItem(item);
         item.shoppingCart = me.shoppingCart;
+        LineItemList.add(item);
+        item.order = o;
+
 
     }
 
@@ -347,7 +350,7 @@ public class UserInterface {
         }
         System.out.println("Users:");
         for (User user : UserList) {
-            System.out.println(user.login_id);
+            System.out.println(user._id);
         }
     }
     private void DeleteProduct(String product_Name){

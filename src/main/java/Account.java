@@ -25,6 +25,8 @@ public class Account {
     }
 
     public Order getLastOrder(){
+        if (Orders.size() == 0)
+            return null;
         return getOrders().get(Orders.size() - 1);
     }
 
@@ -44,7 +46,8 @@ public class Account {
 
 
     public void printConnected(){
-        System.out.println("this Account is connected to these orders:");
+        if (Orders.size() != 0)
+            System.out.println("This Account is connected to these orders:");
         for (Order order:Orders) {
             System.out.println(order._id);
         }

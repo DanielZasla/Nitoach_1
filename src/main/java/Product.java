@@ -54,7 +54,7 @@ public class Product {
         for (LineItem item:LItems) {
             System.out.println(item._id);
         }
-        System.out.println("this product is also connected to this Premium Account: "+premacc);
+        System.out.println("this product is also connected to this Premium Account: "+premacc._id);
     }
 
 }

@@ -24,14 +24,14 @@ public class Order {
         this.status = OrderStatus.New;
         this.total = 0;
         this.account = acc;
+        ordered = new Date();
     }
 
     public void printDetails() {
-        System.out.println("ID number: " + this.number + "\nOrder date: " + this.ordered + "\nShipping date: " + this.shipped + "\nOrder address: " + this.ship_to + "\nOrder status: " + this.status + "\nTotal payed: " + this.total + "$");
-
+        System.out.println("ID number: " + this.number + "\nOrder date: " + this.ordered.toString() + "\nShipping date: " + this.shipped + "\nOrder address: " + this.ship_to.address + "\nOrder status: " + this.status + "\nTotal payed: " + this.total + "$");
     }
 
-    public void addItem(LineItem item){
+    public Payment addItem(LineItem item){
         System.out.println("Immediate payment(default) or delayed payment? (I/D)");
         Scanner scanner = new Scanner(System.in);
         String answer = scanner.nextLine();
@@ -43,8 +43,14 @@ public class Order {
             account.balance -= item.price;
         }
 
+        p.order = this;
+        p.acc = this.account;
+
         Payments.add(p);
+        this.account.Payments.add(p);
         LItems.add(item);
+
+        return p;
     }
 
 
