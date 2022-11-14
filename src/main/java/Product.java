@@ -6,6 +6,8 @@ public class Product {
     String _id;
     String name;
     Supplier supplier;
+    int price;
+    int quantity;
 
     PremiumAccount premacc;
 
@@ -16,6 +18,8 @@ public class Product {
         this.name = name;
         this.supplier = supplier;
         this.premacc = null;
+        this.price = 0;
+        this.quantity = 0;
     }
 
     public void setPrice(int price) {

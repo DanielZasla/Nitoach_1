@@ -13,15 +13,17 @@ public class Order {
     Date shipped;
     Address ship_to;
     OrderStatus status;
+    Account account;
     float total;
 
-    public Order(String number, Address ship_to, float total) {
+    public Order(String number, Address ship_to, Account acc) {
         this._id = String.format("order%d", OrdCounter);
         OrdCounter++;
         this.number = number;
         this.ship_to = ship_to;
         this.status = OrderStatus.New;
-        this.total = total;
+        this.total = 0;
+        this.account = acc;
     }
 
     public void printDetails() {
@@ -43,7 +45,6 @@ public class Order {
 
         Payments.add(p);
         LItems.add(item);
-        //TODO: Wait for forum clarification about updating payment.
     }
 
 

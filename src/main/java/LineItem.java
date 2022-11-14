@@ -5,9 +5,9 @@ public class LineItem {
     int price;
     Order order;
     Product product;
-    ShoppingCart cart;
+    ShoppingCart shoppingCart;
 
-    public LineItem(int quantity, int price, Product product) {
+    public LineItem(Product p) {
         this._id = String.format("lineItem%d",LineItemCounter);
         LineItemCounter++;
         this.quantity = p.quantity;
@@ -21,6 +21,6 @@ public class LineItem {
     public void printConnected(){
         System.out.println("this Line Item is connected to: "+ order._id);
         System.out.println("this Line Item is also connected to: "+ product._id);
-        System.out.println("this Line Item is also connected to: "+ cart._id);
+        System.out.println("this Line Item is also connected to: "+ shoppingCart._id);
     }
 }

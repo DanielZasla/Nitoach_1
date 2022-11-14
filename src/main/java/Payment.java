@@ -35,6 +35,7 @@ public abstract class Payment {
         details = newdetails;
     }
 
+
     public void printDetails(){
         System.out.println("Id: "+  id+"\nPaid: " + paid + "\nTotal: " + total
                 + "\nDetails: "+ details);

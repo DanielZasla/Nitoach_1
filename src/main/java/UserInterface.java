@@ -17,8 +17,14 @@ public class UserInterface {
     private User connected_user;
 
 
+    public static void main(String[] args){
+        UserInterface UI = new UserInterface();
+        UI.run();
+    }
+
 
     public void run() {
+        String loginId,password,address, orderId,productName,supplierName;
         PopulateSystem();
         Scanner scanner = new Scanner(System.in);
         while(true) {
@@ -39,9 +45,12 @@ public class UserInterface {
                     """);
             int pick = scanner.nextInt();
             switch (pick){
+                default:
+                    System.out.println("Illegal character.");
+                    break;
                 case 1:
                     System.out.println("Please enter login id for the new user: ");
-                    String loginId = scanner.next();
+                    loginId = scanner.next();
                     AddUser(loginId);
                     break;
                 case 2:
@@ -57,15 +66,22 @@ public class UserInterface {
                     System.out.println("Please enter login id for the user: ");
                     loginId = scanner.next();
                     System.out.println("Please enter the password for this user");
-                    String password = scanner.next();
+                    password = scanner.next();
                     LoginUser(loginId,password);
                     break;
                 case 4:
                     LogoutUser();
+                    break;
+                case 5:
+                    if (isConnected()){
+                        System.out.println("Please enter the order Address: ");
+                        address = scanner.next();
+                        CreateOrder(address);
+                    } else {
+                        System.out.println("No user is connected at the moment.");
+                    }
 
-                case 5://TODO continue after implemented
-
-
+                    break;
                 case 6:
                     if (isConnected()){
                         System.out.println("Please enter the order id: ");
@@ -100,13 +116,14 @@ public class UserInterface {
                     System.out.println("Please enter the Product name:");
                     productName = scanner.next();
                     System.out.println("Please enter the supplier name:");
-                    String supplierName = scanner.next();
+                    supplierName = scanner.next();
                     AddProduct(productName,supplierName);
                     break;
                 case 10:
                     System.out.println("Please enter the Product name:");
                     productName = scanner.next();
-                    //TODO continue when implemented
+                    DeleteProduct(productName);
+                    break;
                 case 11:
                     ShowAllObjects();
                     break;
@@ -143,6 +160,7 @@ public class UserInterface {
         System.out.println("New User successfully created, returning to main menu.");
     }
 
+    // TODO: add this to 3 and 8
 
     private void RemoveUser(String login_id){
         if (connected_user != null){
@@ -207,7 +225,9 @@ public class UserInterface {
 
     private void CreateOrder(String address){
         Address add = new Address(address);
-        Order newOrder = new Order("Number", add, 100);
+        Account acc = connected_user.getCustomer().getAccount();
+        Order newOrder = new Order("Number", add, acc);
+        acc.getOrders().add(newOrder);
         OrderList.add(newOrder);
     }
 
@@ -226,8 +246,8 @@ public class UserInterface {
             System.out.println("The account " + a.id + " does not have an order with that number."); return;
         }
         Product p = getProduct(product_name);
-        if(p==null){
-            System.out.println("Product doesn't exist."); return;
+        if(p==null || p.premacc == null){
+            System.out.println("Product doesn't exist or isn't linked to a premium account."); return;
         }
 
 
@@ -326,6 +346,27 @@ public class UserInterface {
         for (User user : UserList) {
             System.out.println(user.login_id);
         }
+    }
+    private void DeleteProduct(String product_Name){
+        Product product = getProduct(product_Name);
+        if (product != null){
+            for (LineItem item : LineItemList) {
+                if(item.product.name.equals(product_Name)) {
+                    item.order.LItems.remove(item);
+                    item.shoppingCart.LItems.remove(item);
+                    LineItemList.remove(item);
+                }
+            }
+            if(product.premacc!=null) {
+                product.premacc.prods.remove(product);
+            }
+            product.supplier.Products.remove(product);
+            ProductList.remove(product);
+        }
+        else {
+            System.out.println("Such product does no exist.");
+        }
+
     }
 
     private void ShowObjectId(String id){
@@ -484,7 +525,7 @@ public class UserInterface {
     }
 
     /**
-     * @param name ID of the Payment
+     * @param id ID of the Payment
      * @return The Payment with the matching ID if exists, else null
      */
     private static Payment getPayment(String id){
@@ -510,7 +551,7 @@ public class UserInterface {
     }
 
     /**
-     * @param name ID of the ShoppingCart
+     * @param id ID of the ShoppingCart
      * @return The ShoppingCart with the matching ID if exists, else null
      */
     private static ShoppingCart getShoppingCart(String id){
@@ -551,13 +592,27 @@ public class UserInterface {
     /**
      * This method is called at the beginning of system runtime to populate the lists with initial entities
      */
-    private static void PopulateSystem(){
+    private void PopulateSystem(){
         SupplierList.add(new Supplier("Osem", "Osem"));
         SupplierList.add(new Supplier("EastWest", "EastWest"));
-        ProductList.add(new Product("Bamba", getSupplier("Osem")));
+        Product bamba = new Product("Bamba", getSupplier("Osem"));
+        ProductList.add(bamba);
         ProductList.add(new Product("Ramen", getSupplier("EastWest")));
-        //AccountList.add(new Account("Dani", "Dani123", getAccount("EastWest"))); TODO figure out if this needs a Customer to reference
-        // TODO figure out previous thing and by that logic understand how to deal with PremiumAccount
+        User daniU = new User("Dani", "Dani123");
+        Customer daniC = new Customer("Dani", new Address("Dani St."), "052239478","Danimail");
+        Account daniA = new Account("Dani", "Dani's House", 100);
+        ShoppingCart daniSC = new ShoppingCart();
+        linkUserClasses(daniU,daniC,daniA,daniSC);
+        User danaU = new User("Dana", "Dana123");
+        Customer danaC = new Customer("Dan1", new Address("Dana St."), "052239477","Danamail");
+        PremiumAccount danaA = new PremiumAccount("Dan1", "Dana's House", 100);
+        ShoppingCart danaSC = new ShoppingCart();
+        linkUserClasses(danaU,danaC,danaA,danaSC);
+        danaA.prods.add(bamba);
+        bamba.price = 1;
+        bamba.quantity = 1;
+        bamba.premacc = danaA;
+
     }
 
     /**
@@ -629,5 +684,6 @@ public class UserInterface {
     private boolean isConnected(){
         return connected_user!=null;
     }
+
 
 }
