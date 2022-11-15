@@ -209,6 +209,7 @@ public class UserInterface {
         if ((user = getUser(login_id)) != null){
             if (user.password.equals(password)) {
                 connected_user = user;
+                System.out.println("User connected");
                 return;
             }
         }
