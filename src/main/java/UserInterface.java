@@ -28,6 +28,7 @@ public class UserInterface {
         PopulateSystem();
         Scanner scanner = new Scanner(System.in);
         while(true) {
+            System.out.println("Welcome " + ((connected_user!= null)? connected_user.login_id: "Guest"));
             System.out.println("""
                     1) Add User
                     2) Remove User
