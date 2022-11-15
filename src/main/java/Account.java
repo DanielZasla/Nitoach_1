@@ -40,7 +40,7 @@ public class Account {
         is_closed = false;
     }
     public void printDetails() {
-        System.out.println("Id: "+ id+"\nbilling address: " + billing_address + "\nIs closed: " + is_closed
+        System.out.println("Id: "+ id+"\nBilling address: " + billing_address + "\nIs closed: " + is_closed
                 + "\nOpen: "+open+"\nClosed: "+ closed +"\nBalance: "+balance);
     }
 

@@ -63,7 +63,7 @@ public class User {
                 "\nState: " + state);
     }
     public void printConnected(){
-        System.out.println("this User is connected to: "+ customer._id);
-        System.out.println("this User is also connected to: "+ cart._id);
+        System.out.println("This User is connected to: "+ customer._id);
+        System.out.println("This User is also connected to: "+ cart._id);
     }
 }

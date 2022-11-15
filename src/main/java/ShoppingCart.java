@@ -37,11 +37,11 @@ public class ShoppingCart {
         System.out.println("Created: " + created);
     }
     public void printConnected(){
-        System.out.println("this Shopping Cart is connected to these Line Items:");
+        System.out.println("This Shopping Cart is connected to these Line Items:");
         for (LineItem item:LItems) {
             System.out.println(item._id);
         }
-        System.out.println("this Shopping Cart is also connected to: "+ acc._id);
-        System.out.println("this Shopping Cart is also connected to: "+ user._id);
+        System.out.println("This Shopping Cart is also connected to: "+ acc._id);
+        System.out.println("This Shopping Cart is also connected to: "+ user._id);
     }
 }

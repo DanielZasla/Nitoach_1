@@ -9,11 +9,6 @@ public class ImmediatePayment extends Payment{
     @Override
     public void printDetails() {
         super.printDetails();
-        if(phoneConfirmation) {
-            System.out.println("Is there phone confirmation : yes");
-        }
-        else {
-            System.out.println("Is there phone confirmation : no");
-        }
+        System.out.println("Phone confirmation: " + (phoneConfirmation? "yes": "no"));
     }
 }

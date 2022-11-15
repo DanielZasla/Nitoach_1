@@ -55,11 +55,11 @@ public class Order {
 
 
     public void printConnected(){
-        System.out.println("this Order is connected to these Line Items:");
+        System.out.println("This Order is connected to these Line Items:");
         for (LineItem item:LItems) {
             System.out.println(item._id);
         }
-        System.out.println("this Order is also connected to these Payments:");
+        System.out.println("This Order is also connected to these Payments:");
         for (Payment payment:Payments) {
             System.out.println(payment._id);
         }

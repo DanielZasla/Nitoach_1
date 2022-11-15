@@ -33,7 +33,7 @@ public class Customer {
                 +"\nEmail: "+email);
     }
     public void printConnected(){
-        System.out.println("this Customer is connected to: "+ account._id);
-        System.out.println("this Customer is also connected to: "+ user._id);
+        System.out.println("This Customer is connected to: "+ account._id);
+        System.out.println("This Customer is also connected to: "+ user._id);
     }
 }

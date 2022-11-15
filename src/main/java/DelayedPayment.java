@@ -12,6 +12,6 @@ public class DelayedPayment extends Payment{
     @Override
     public void printDetails() {
         super.printDetails();
-        System.out.println("Payment Date is: "+paymentDate.toString());
+        System.out.println("Payment date is: "+paymentDate.toString());
     }
 }

@@ -11,4 +11,14 @@ public class PremiumAccount extends Account{
     public ArrayList<Product> getProds() {
         return prods;
     }
+
+    public void printConnected(){
+        super.printConnected();
+        if (!prods.isEmpty()){
+            System.out.println("This Premium Account is connected to these Products:");
+            for (Product p :prods){
+                System.out.println(p._id);
+            }
+        }
+    }
 }

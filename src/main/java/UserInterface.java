@@ -65,7 +65,7 @@ public class UserInterface {
                     }
                     System.out.println("Please enter login id for the user: ");
                     loginId = scanner.next();
-                    System.out.println("Please enter the password for this user");
+                    System.out.println("Please enter the password for this user:");
                     password = scanner.next();
                     LoginUser(loginId,password);
                     break;
@@ -370,13 +370,13 @@ public class UserInterface {
             ProductList.remove(product);
         }
         else {
-            System.out.println("Such product does no exist.");
+            System.out.println("No such product exists.");
         }
 
     }
 
     private void ShowObjectId(String id){
-        System.out.println("Please choose the object you want to see:");
+        System.out.println("Please choose the object type to view:");
         System.out.println("""
                 1) Account
                 2) Customer
@@ -392,8 +392,13 @@ public class UserInterface {
             case 1:
                 for (Account account : AccountList) {
                     if(Objects.equals("account" + id, account._id)) {
-                        account.printDetails();
-                        account.printConnected();
+                            account.printDetails();
+                        if (account instanceof PremiumAccount){
+                            ((PremiumAccount)account).printConnected();
+                        }
+                        else{
+                            account.printConnected();
+                        }
                         return;
                     }
                 }

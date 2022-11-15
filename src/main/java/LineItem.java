@@ -19,8 +19,8 @@ public class LineItem {
         System.out.println("Quantity: "+ quantity+"\nPrice: "+ price);
     }
     public void printConnected(){
-        System.out.println("this Line Item is connected to: "+ order._id);
-        System.out.println("this Line Item is also connected to: "+ product._id);
-        System.out.println("this Line Item is also connected to: "+ shoppingCart._id);
+        System.out.println("This Line Item is connected to: "+ order._id);
+        System.out.println("This Line Item is also connected to: "+ product._id);
+        System.out.println("This Line Item is also connected to: "+ shoppingCart._id);
     }
 }

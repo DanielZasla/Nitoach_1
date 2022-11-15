@@ -50,11 +50,11 @@ public class Product {
         System.out.println("ID: " + _id+"\nName: " + name);
     }
     public void printConnected(){
-        System.out.println("this product is connected to these Line Items:");
+        System.out.println("This product is connected to these Line Items:");
         for (LineItem item:LItems) {
             System.out.println(item._id);
         }
-        System.out.println("this product is also connected to this Premium Account: "+premacc._id);
+        System.out.println("This product is also connected to this Premium Account: "+premacc._id);
     }
 
 }

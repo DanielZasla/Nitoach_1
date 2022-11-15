@@ -41,7 +41,7 @@ public abstract class Payment {
                 + "\nDetails: "+ details);
     }
     public void printConnected(){
-        System.out.println("this Payment is connected to: "+ order._id);
-        System.out.println("this Payment is also connected to: "+ acc._id);
+        System.out.println("This Payment is connected to: "+ order._id);
+        System.out.println("This Payment is also connected to: "+ acc._id);
     }
 }
