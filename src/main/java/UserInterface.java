@@ -394,13 +394,17 @@ public class UserInterface {
     }
     private void DeleteProduct(String product_Name){
         Product product = getProduct(product_Name);
+        ArrayList<LineItem> helper = new ArrayList<>();
         if (product != null){
             for (LineItem item : LineItemList) {
                 if(item.product.name.equals(product_Name)) {
                     item.order.LItems.remove(item);
                     item.shoppingCart.LItems.remove(item);
-                    LineItemList.remove(item);
+                    helper.add(item);
                 }
+            }
+            for(LineItem item : helper){
+                LineItemList.remove(item);
             }
             if(product.premacc!=null) {
                 product.premacc.prods.remove(product);
@@ -647,6 +651,7 @@ public class UserInterface {
         SupplierList.add(new Supplier("Osem", "Osem"));
         SupplierList.add(new Supplier("EastWest", "EastWest"));
         Product bamba = new Product("Bamba", getSupplier("Osem"));
+        bamba.supplier.Products.add(bamba);
         ProductList.add(bamba);
         ProductList.add(new Product("Ramen", getSupplier("EastWest")));
         User daniU = new User("Dani", "Dani123");
@@ -655,22 +660,22 @@ public class UserInterface {
         ShoppingCart daniSC = new ShoppingCart();
         linkUserClasses(daniU,daniC,daniA,daniSC);
         User danaU = new User("Dana", "Dana123");
-        Customer danaC = new Customer("Dan1", new Address("Dana St."), "052239477","Danamail");
-        PremiumAccount danaA = new PremiumAccount("Dan1", "Dana's House", 100);
+        Customer danaC = new Customer("Dana", new Address("Dana St."), "052239477","Danamail");
+        PremiumAccount danaA = new PremiumAccount("Dana", "Dana's House", 100);
         ShoppingCart danaSC = new ShoppingCart();
         linkUserClasses(danaU,danaC,danaA,danaSC);
         danaA.prods.add(bamba);
         bamba.price = 1;
         bamba.quantity = 1;
         bamba.premacc = danaA;
-        UserList.add(danaU);
         UserList.add(daniU);
-        CustomerList.add(danaC);
+        UserList.add(danaU);
         CustomerList.add(daniC);
-        AccountList.add(danaA);
+        CustomerList.add(danaC);
         AccountList.add(daniA);
-        ShoppingCartList.add(danaSC);
+        AccountList.add(danaA);
         ShoppingCartList.add(daniSC);
+        ShoppingCartList.add(danaSC);
 
     }
 
