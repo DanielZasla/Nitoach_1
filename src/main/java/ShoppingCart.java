@@ -34,7 +34,7 @@ public class ShoppingCart {
     }
 
     public void printDetails() {
-        System.out.println("Created: " + created);
+        System.out.println("Created: " + created.toString());
     }
     public void printConnected(){
         System.out.println("This Shopping Cart is connected to these Line Items:");

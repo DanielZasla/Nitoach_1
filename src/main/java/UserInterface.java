@@ -267,7 +267,7 @@ public class UserInterface {
         item.shoppingCart = me.shoppingCart;
         LineItemList.add(item);
         item.order = o;
-
+        System.out.println("Product: "+product_name+" has been added to order: "+order_id);
 
     }
 
@@ -310,6 +310,7 @@ public class UserInterface {
             Product p = new Product(product_name,s);
             ProductList.add(p);
             s.Products.add(p);
+            System.out.println("Product: "+product_name+" has been added to supplier: "+supplier_name);
         }
         else{
             System.out.println("No suppliers with that name exist.");
@@ -317,42 +318,79 @@ public class UserInterface {
     }
 
     private void ShowAllObjects() {
+        boolean flag = false;
         System.out.println("Accounts:");
+        System.out.print("\t");
         for (Account account : AccountList) {
-            System.out.println(account._id);
+            System.out.print((flag?", ":"")+account._id);
+            flag = true;
         }
+        flag = false;
+        System.out.println();
         System.out.println("Customers:");
+        System.out.print("\t");
         for (Customer customer : CustomerList) {
-            System.out.println(customer._id);
+            System.out.print((flag?", ":"")+customer._id);
+            flag = true;
         }
+        flag = false;
+        System.out.println();
         System.out.println("Line Items:");
+        System.out.print("\t");
         for (LineItem lineItem : LineItemList) {
-            System.out.println(lineItem._id);
+            System.out.print((flag?", ":"")+lineItem._id);
+            flag = true;
         }
+        flag = false;
+        System.out.println();
         System.out.println("Orders:");
+        System.out.print("\t");
         for (Order order : OrderList) {
-            System.out.println(order._id);
+            System.out.print((flag?", ":"")+order._id);
+            flag = true;
         }
+        flag = false;
+        System.out.println();
         System.out.println("Payments:");
+        System.out.print("\t");
         for (Payment payment : PaymentList) {
-            System.out.println(payment._id);
+            System.out.print((flag?", ":"")+payment._id);
+            flag = true;
         }
+        flag = false;
+        System.out.println();
         System.out.println("Products:");
+        System.out.print("\t");
         for (Product product : ProductList) {
-            System.out.println(product._id);
+            System.out.print((flag?", ":"")+product._id);
+            flag = true;
         }
+        flag = false;
+        System.out.println();
         System.out.println("Shopping Carts:");
+        System.out.print("\t");
         for (ShoppingCart shoppingCart : ShoppingCartList) {
-            System.out.println(shoppingCart._id);
+            System.out.print((flag?", ":"")+shoppingCart._id);
+            flag = true;
         }
+        flag = false;
+        System.out.println();
         System.out.println("Suppliers:");
+        System.out.print("\t");
         for (Supplier supplier : SupplierList) {
-            System.out.println(supplier._id);
+            System.out.print((flag?", ":"")+supplier._id);
+            flag = true;
         }
+        flag = false;
+        System.out.println();
         System.out.println("Users:");
+        System.out.print("\t");
         for (User user : UserList) {
-            System.out.println(user._id);
+            System.out.print((flag?", ":"")+user._id);
+            flag = true;
         }
+        flag = false;
+        System.out.println();
     }
     private void DeleteProduct(String product_Name){
         Product product = getProduct(product_Name);
@@ -369,6 +407,7 @@ public class UserInterface {
             }
             product.supplier.Products.remove(product);
             ProductList.remove(product);
+            System.out.println("Product has been deleted");
         }
         else {
             System.out.println("No such product exists.");

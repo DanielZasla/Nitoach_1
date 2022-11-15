@@ -29,7 +29,7 @@ public class Customer {
     }
 
     public void printDetails() {
-        System.out.println("Id: "+ id+"\nAddress: "+ address+"\nPhone: "+ phone
+        System.out.println("Id: "+ id+"\nAddress: "+ address.address+"\nPhone: "+ phone
                 +"\nEmail: "+email);
     }
     public void printConnected(){

@@ -63,6 +63,7 @@ public class Order {
         for (Payment payment:Payments) {
             System.out.println(payment._id);
         }
+        System.out.println("This Order is also connected to this Account: " + account._id);
     }
 
     public ArrayList<Payment> getPayments() {

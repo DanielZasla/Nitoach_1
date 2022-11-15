@@ -60,7 +60,7 @@ public class User {
 
     public void printDetails() {
         System.out.println("Login id: "+ login_id+"\nPassword: " + password +
-                "\nState: " + state);
+                "\nState: " + state.toString());
     }
     public void printConnected(){
         System.out.println("This User is connected to: "+ customer._id);

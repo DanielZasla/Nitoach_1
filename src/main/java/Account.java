@@ -51,6 +51,8 @@ public class Account {
         for (Order order:Orders) {
             System.out.println(order._id);
         }
+        System.out.println("This Account is also connected to this Customer: "+ customer._id);
+        System.out.println("This Account is also connected to this Shopping cart: "+shoppingCart._id);
     }
 
     public ArrayList<Order> getOrders() {
