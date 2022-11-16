@@ -20,7 +20,7 @@ public class Supplier {
         }
     }
 
-    public void printDetails() {
-        System.out.println("Id: "+ id+"\nName: " + name);
+    public String toString() {
+        return "Id: "+ id+"\nName: " + name;
     }
 }

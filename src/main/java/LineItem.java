@@ -15,8 +15,8 @@ public class LineItem {
         this.product = p;
     }
 
-    public void printDetails() {
-        System.out.println("Quantity: "+ quantity+"\nPrice: "+ price);
+    public String toString() {
+        return "Quantity: "+ quantity+"\nPrice: "+ price;
     }
     public void printConnected(){
         System.out.println("This Line Item is connected to: "+ order._id);

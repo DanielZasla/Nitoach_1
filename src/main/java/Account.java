@@ -39,9 +39,9 @@ public class Account {
         open = new Date();
         is_closed = false;
     }
-    public void printDetails() {
-        System.out.println("Id: "+ id+"\nBilling address: " + billing_address + "\nIs closed: " + is_closed
-                + "\nOpen: "+open+"\nClosed: "+ closed +"\nBalance: "+balance);
+    public String toString() {
+        return "Id: "+ id+"\nBilling address: " + billing_address + "\nIs closed: " + is_closed
+                + "\nOpen: "+open+"\nClosed: "+ closed +"\nBalance: "+balance;
     }
 
 

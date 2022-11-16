@@ -28,9 +28,9 @@ public class Customer {
         this.user = user;
     }
 
-    public void printDetails() {
-        System.out.println("Id: "+ id+"\nAddress: "+ address.address+"\nPhone: "+ phone
-                +"\nEmail: "+email);
+    public String toString() {
+        return "Id: "+ id+"\nAddress: "+ address.address+"\nPhone: "+ phone
+                +"\nEmail: "+email;
     }
     public void printConnected(){
         System.out.println("This Customer is connected to: "+ account._id);

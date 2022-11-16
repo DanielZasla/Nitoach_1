@@ -1,14 +1,16 @@
+import java.util.Date;
+
 public class ImmediatePayment extends Payment{
-    boolean phoneConfirmation;
-    public ImmediatePayment(){//fill this shit
+    boolean phoneConfirmation = false;
+    public ImmediatePayment(){
         this._id = String.format("payment%d",PayCounter);
+        paid = new Date();
         PayCounter++;
-        //do more plz
+
     }
 
     @Override
-    public void printDetails() {
-        super.printDetails();
-        System.out.println("Phone confirmation: " + (phoneConfirmation? "yes": "no"));
+    public String toString() {
+        return super.toString() + "\nPhone confirmation: " + (phoneConfirmation? "yes": "no");
     }
 }

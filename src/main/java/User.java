@@ -7,9 +7,6 @@ public class User {
     Customer customer;
     ShoppingCart cart;
 
-    public void setLogin_id(String login_id) {
-        this.login_id = login_id;
-    }
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
@@ -41,26 +38,9 @@ public class User {
         return login_id;
     }
 
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public UserState getState() {
-        return state;
-    }
-
-    public void setState(UserState state) {
-        this.state = state;
-    }
-
-    public void printDetails() {
-        System.out.println("Login id: "+ login_id+"\nPassword: " + password +
-                "\nState: " + state.toString());
+    public String toString() {
+        return "Login id: "+ login_id+"\nPassword: " + password +
+                "\nState: " + state.toString();
     }
     public void printConnected(){
         System.out.println("This User is connected to: "+ customer._id);

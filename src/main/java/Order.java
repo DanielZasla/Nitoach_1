@@ -1,4 +1,3 @@
-import javax.sound.sampled.Line;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -27,8 +26,8 @@ public class Order {
         ordered = new Date();
     }
 
-    public void printDetails() {
-        System.out.println("ID number: " + this.number + "\nOrder date: " + this.ordered.toString() + "\nShipping date: " + this.shipped + "\nOrder address: " + this.ship_to.address + "\nOrder status: " + this.status + "\nTotal payed: " + this.total + "$");
+    public String toString() {
+        return "ID number: " + this.number + "\nOrder date: " + this.ordered.toString() + "\nShipping date: " + this.shipped + "\nOrder address: " + this.ship_to.address + "\nOrder status: " + this.status + "\nTotal payed: " + this.total + "$";
     }
 
     public Payment addItem(LineItem item){
@@ -64,10 +63,6 @@ public class Order {
             System.out.println(payment._id);
         }
         System.out.println("This Order is also connected to this Account: " + account._id);
-    }
-
-    public ArrayList<Payment> getPayments() {
-        return Payments;
     }
 }
 

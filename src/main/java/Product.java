@@ -22,13 +22,6 @@ public class Product {
         this.quantity = 0;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
 
     public boolean Link(PremiumAccount prem){
         if (premacc != null){
@@ -38,16 +31,12 @@ public class Product {
         return true;
     }
 
-    public void addLineItem(LineItem l){
-        LItems.add(l);
-    }
-
     public void setPremacc(PremiumAccount premacc) {
         this.premacc = premacc;
     }
 
-    public void printDetails() {
-        System.out.println("ID: " + _id+"\nName: " + name);
+    public String toString() {
+        return "ID: " + _id+"\nName: " + name;
     }
     public void printConnected(){
         System.out.println("This product is connected to these Line Items:");

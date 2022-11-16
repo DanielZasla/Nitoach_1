@@ -1,7 +1,5 @@
-import javax.sound.sampled.Line;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Vector;
 
 public class ShoppingCart {
     ArrayList<LineItem> LItems = new ArrayList<>();
@@ -33,8 +31,8 @@ public class ShoppingCart {
         return LItems;
     }
 
-    public void printDetails() {
-        System.out.println("Created: " + created.toString());
+    public String toString() {
+        return "Created: " + created.toString();
     }
     public void printConnected(){
         System.out.println("This Shopping Cart is connected to these Line Items:");

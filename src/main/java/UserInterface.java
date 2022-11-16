@@ -197,6 +197,7 @@ public class UserInterface {
         // Removing from the lists.
         ShoppingCartList.remove(user.getCart());
         AccountList.remove(acc);
+        assert acc != null;
         CustomerList.remove(acc.customer);
         UserList.remove(user);
 
@@ -256,6 +257,10 @@ public class UserInterface {
             System.out.println("Product doesn't exist or isn't linked to a premium account."); return;
         }
 
+        if (p.quantity <= 0) {
+            System.out.println("Product ran out."); return;
+        }
+
         LineItem item = new LineItem(p);
         if (item.price > me.balance){
             System.out.println("Insufficient balance in the account to order the product."); return;
@@ -282,7 +287,7 @@ public class UserInterface {
             System.out.println("Connected user has no orders in its account.");
         else {
             System.out.println("Last placed order:");
-            o.printDetails();
+            System.out.println(o);
         }
     }
 
@@ -299,6 +304,7 @@ public class UserInterface {
         }
         if (!prod.Link((PremiumAccount) acc)){
             System.out.println("This product is already linked to another Premium user.");
+            return;
         }
         ((PremiumAccount) acc).prods.add(prod);
         prod.price = price;
@@ -390,7 +396,6 @@ public class UserInterface {
             System.out.print((flag?", ":"")+user._id);
             flag = true;
         }
-        flag = false;
         System.out.println();
     }
     private void DeleteProduct(String product_Name){
@@ -437,13 +442,8 @@ public class UserInterface {
             case 1:
                 for (Account account : AccountList) {
                     if(Objects.equals("account" + id, account._id)) {
-                            account.printDetails();
-                        if (account instanceof PremiumAccount){
-                            ((PremiumAccount)account).printConnected();
-                        }
-                        else{
-                            account.printConnected();
-                        }
+                            System.out.println(account);
+                        account.printConnected();
                         return;
                     }
                 }
@@ -451,7 +451,7 @@ public class UserInterface {
             case 2:
                 for (Customer customer : CustomerList) {
                     if (Objects.equals("customer" + id, customer._id)) {
-                        customer.printDetails();
+                        System.out.println(customer);
                         customer.printConnected();
                         return;
                     }
@@ -460,7 +460,7 @@ public class UserInterface {
             case 3:
                 for (LineItem lineItem : LineItemList) {
                     if (Objects.equals("lineItem" + id, lineItem._id)) {
-                        lineItem.printDetails();
+                        System.out.println(lineItem);
                         lineItem.printConnected();
                         return;
                     }
@@ -469,7 +469,7 @@ public class UserInterface {
             case 4:
                 for (Order order : OrderList) {
                     if (Objects.equals("order" + id, order._id)) {
-                        order.printDetails();
+                        System.out.println(order);
                         order.printConnected();
                         return;
                     }
@@ -478,7 +478,7 @@ public class UserInterface {
             case 5:
                 for (Payment payment : PaymentList) {
                     if (Objects.equals("payment" + id, payment._id)) {
-                        payment.printDetails();
+                        System.out.println(payment);
                         payment.printConnected();
                         return;
                     }
@@ -487,7 +487,7 @@ public class UserInterface {
             case 6:
                 for (Product product : ProductList) {
                     if (Objects.equals("product" + id, product._id)) {
-                        product.printDetails();
+                        System.out.println(product);
                         product.printConnected();
                         return;
                     }
@@ -496,7 +496,7 @@ public class UserInterface {
             case 7:
                 for (ShoppingCart shoppingCart : ShoppingCartList) {
                     if (Objects.equals("shoppingCart" + id, shoppingCart._id)) {
-                        shoppingCart.printDetails();
+                        System.out.println(shoppingCart);
                         shoppingCart.printConnected();
                         return;
                     }
@@ -505,7 +505,7 @@ public class UserInterface {
             case 8:
                 for (Supplier supplier : SupplierList) {
                     if (Objects.equals("supplier" + id, supplier._id)) {
-                        supplier.printDetails();
+                        System.out.println(supplier);
                         supplier.printConnected();
                         return;
                     }
@@ -514,7 +514,7 @@ public class UserInterface {
             case 9:
                 for (User user : UserList) {
                     if (Objects.equals("user" + id, user._id)) {
-                        user.printDetails();
+                        System.out.println(user);
                         user.printConnected();
                         return;
                     }
@@ -542,56 +542,6 @@ public class UserInterface {
         return null;
     }
 
-    /**
-     * @param id ID of the Customer
-     * @return The Customer with the matching ID if exists, else null
-     */
-    private static Customer getCustomer(String id){
-        for (Customer c : CustomerList){
-            if (c.id.equals(id)){
-                return c;
-            }
-        }
-        return null;
-    }
-    /**
-     * @param id _ID of the LineItem
-     * @return The LineItem with the matching ID if exists, else null
-     */
-    private static LineItem getLineItem(String id){
-        for (LineItem l : LineItemList){
-            if (l._id.equals(id)){
-                return l;
-            }
-        }
-        return null;
-    }
-
-    /**
-     * @param id ID of the Order
-     * @return The Order with the matching ID if exists, else null
-     */
-    private static Order getOrder(String id){
-        for (Order o: OrderList){
-            if (o.number.equals(id)){
-                return o;
-            }
-        }
-        return null;
-    }
-
-    /**
-     * @param id ID of the Payment
-     * @return The Payment with the matching ID if exists, else null
-     */
-    private static Payment getPayment(String id){
-        for (Payment p : PaymentList){
-            if (p._id.equals(id)){
-                return p;
-            }
-        }
-        return null;
-    }
 
     /**
      * @param name Name of the Product
