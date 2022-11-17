@@ -29,21 +29,7 @@ public class UserInterface {
         Scanner scanner = new Scanner(System.in);
         while(true) {
             System.out.println("Welcome " + ((connected_user!= null)? connected_user.login_id: "Guest"));
-            System.out.println("""
-                    1) Add User
-                    2) Remove User
-                    3) Login User
-                    4) Logout User
-                    5) Create New Order
-                    6) Add Product To Order
-                    7) Display Order
-                    8) Link Product
-                    9) Add Product
-                    10) Delete Product
-                    11) Show All Object
-                    12) Show Object By Id
-                    0) Exit
-                    """);
+            System.out.println("1) Add User\n2) Remove User\n3) Login User\n4) Logout User\n5) Create New Order\n6) Add Product To Order\n7) Display Order\n8) Link Product\n9) Add Product\n10) Delete Product\n11) Show All Object\n12) Show Object By Id\n0) Exit\n");
             int pick = scanner.nextInt();
             switch (pick){
                 default:
@@ -427,16 +413,7 @@ public class UserInterface {
 
     private void ShowObjectId(String id){
         System.out.println("Please choose the object type to view:");
-        System.out.println("""
-                1) Account
-                2) Customer
-                3) Line Item
-                4) Order
-                5) Payment
-                6) Product
-                7) Shopping Cart
-                8) Supplier
-                9) User""");
+        System.out.println("1) Account\n2) Customer\n3) Line Item\n4) Order\n5) Payment\n6) Product\n7) Shopping Cart\n8) Supplier\n9) User");
         int pick = scanner.nextInt();
         switch (pick){
             case 1:
